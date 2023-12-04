@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;900&family=Poppins:ital,wght@0,800;0,900;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(0, 69, 255, 0.75),
+      rgba(0, 69, 255, 0.75)
+    ),
+    url(/assets/images/BG.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.main-navigation {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0045ff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.logo-container {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.primary-nav ul li,
+.secondary-nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul a {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  background-color: #09ad2d;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-decoration: none;
+}
