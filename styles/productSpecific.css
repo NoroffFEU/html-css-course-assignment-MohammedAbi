@@ -159,36 +159,57 @@
   margin-left: 120px;
 }
 
-.popularStoff {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background: #0037CC;
+.popularItems {
+  display: block;
+  background-color: #0037cc;
+  padding: 18px 125px 155px 152px;
 }
 
-.headline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     color: #FFF;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 34px;
-    padding: 10px;
-    margin-top: 18px;
-}
-.popularStoff img{
-    width: 131px;
-}
-.items {
-    width: auto;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.popularItems h2 {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 20px;
 }
 
-.items p{
-    display: inline-bloc;
-    color: red;
+.containerItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.popularItemsList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.popularItemsList img {
+  width: 131px;
+  border-radius: 6px;
+}
+
+.popularItemsList p {
+  width: 153px;
+  height: 62px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-left: 10px;
+}
+
+.popularItemsList p:nth-last-child(1) {
+  margin-top: 45px;
+}
+
+.popularItemsList span {
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
