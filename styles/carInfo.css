@@ -1,0 +1,166 @@
+.productSpecific {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.cartStatus {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  margin-top: 74px;
+}
+.cartstatusIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 158px;
+  height: 48px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  border: 0.5px solid #dbdee7;
+}
+
+.cartstatusIndicator:first-child {
+  background-color: #0045ff;
+  border-radius: 6px 0px 0px 6px;
+  color: #fff;
+}
+
+.cartInfo h1 {
+  color: #000;
+  text-align: center;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 64px;
+  margin-top: 34px;
+}
+
+.tableContainer {
+  margin: 54px 150px 48px 150px;
+}
+
+.tableContainer table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tableContainer table thead {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.tableContainer table thead td {
+  border-bottom: 1px solid #dbdee7;
+  padding-bottom: 16px;
+}
+
+.tableContainer table tbody td input {
+  width: 25%;
+  padding-left: 1px;
+  border: 1px solid #dbdee7;
+}
+
+.tableContainer table td {
+  padding: 20px;
+  text-align: start;
+  border-bottom: 1px solid #dbdee7;
+}
+.tableContainer table tbody .deleteItem {
+  width: 22px;
+  height: 22px;
+  color: #0045ff;
+}
+
+
+.tableContainer table td:nth-child(1) {
+  width: 100px;
+}
+
+.tableContainer table tbody img {
+  width: 100px;
+  height: auto;
+}
+
+.tableContainer table td:nth-child(2) {
+  width: 300px;
+}
+
+.tableContainer table td:nth-child(3),
+.tableContainer table td:nth-child(4),
+.tableContainer table td:nth-child(6),
+.tableContainer table td:nth-child(7) {
+  width: 100px;
+}
+
+.tableContainer table td:nth-child(5) {
+  width: 200px;
+}
+
+.totalPrice {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 4.9%;
+  padding: 0 10px 10px 0;
+}
+.totalPrice h3 {
+  width: 98px;
+  height: 32px;
+  margin-right: 20px;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.totalPrice p {
+  width: 96px;
+  height: 32px;
+  color: #000;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.ctaCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 5%;
+  padding: 0 10px 10px 0;
+  margin-bottom: 96px;
+}
+.ctaCart p {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-left: 150px;
+}
+
+.ctaCart .submitButton {
+  width: 214px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #0045ff;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  border: none;
+  padding: 13px 10.5px;
+  margin-top: 24px;
+}

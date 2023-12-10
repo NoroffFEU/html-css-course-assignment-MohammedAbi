@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Info</title>
+    <link rel="stylesheet" href="/styles/navigation.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/carInfo.css" />
+  </head>
+
+  <body>
+    <section class="productSpecific">
+      <nav class="main-navigation">
+        <a href="/index.html" class="logo-container">
+          <img class="logo" src="/assets/images/logo.png" alt="" />
+        </a>
+        <div class="nav-links primary-nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index/productPage.html">Men</a></li>
+            <li><a href="/index/productPage.html">Women</a></li>
+          </ul>
+        </div>
+        <div class="nav-links secondary-nav">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="cart-container">
+          <img src="/assets/images/cart.png" alt="" />
+          <a class="cart-count" href="#">0</a>
+        </div>
+      </nav>
+      <section class="cartInfo">
+        <div class="cartStatus">
+          <div class="cartstatusIndicator">cart</div>
+          <div class="cartstatusIndicator">Delivery</div>
+          <div class="cartstatusIndicator">Payment</div>
+          <div class="cartstatusIndicator">Reciept</div>
+        </div>
+        <h1>Cart Info</h1>
+
+        <div class="tableContainer">
+          <table>
+            <thead>
+              <tr>
+                <td>Item</td>
+                <td>Descripton</td>
+                <td>Size</td>
+                <td>Color</td>
+                <td>Qnty</td>
+                <td>Price</td>
+                <td>Delete</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><img src="/assets/images/RainyDays_Jacket1.jpg" alt=""
+                  /></a>
+                </td>
+                <td>
+                  <h3>StormGuard Pro</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </td>
+                <td>52</td>
+                <td>Red</td>
+                <td><input type="number" value="1" /></td>
+                <td>$142</td>
+                <td class="deleteItem">x</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><img src="/assets/images/RainyDays_Jacket2.jpg" alt=""
+                  /></a>
+                </td>
+                <td>
+                  <h3>RainMaster Flex</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </td>
+                <td>50</td>
+                <td>Black</td>
+                <td><input type="number" value="1" /></td>
+                <td>$124</td>
+                <td class="deleteItem">x</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><img src="/assets/images/RainyDays_Jacket6.jpg" alt=""
+                  /></a>
+                </td>
+                <td>
+                  <h3>WeatherShield</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </td>
+                <td>50</td>
+                <td>White</td>
+                <td><input type="number" value="1" /></td>
+                <td>$142</td>
+                <td class="deleteItem">x</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section class="cartTotal">
+          <div class="totalPrice">
+            <h3>Total Price:</h3>
+            <p>$485</p>
+          </div>
+          <div class="ctaCart">
+            <p>< Continue Shopping</p>
+            <button class="submitButton">Submit</button>
+          </div>
+        </section>
+      </section>
+      <section class="footer-section">
+        <footer class="main-footer">
+          <div class="left-section">
+            <a href="/index.html">
+              <img src="/assets/images/logo.png" alt="" />
+            </a>
+            <p>- We create beauty</p>
+          </div>
+          <div class="middle-section">
+            <a href="/index.html">
+              <span>Store</span>
+            </a>
+            <a href="/index/productPage.html">
+              <p>New Season</p>
+            </a>
+            <a href="/index/productPage.html">
+              <p>Most Sold</p>
+            </a>
+          </div>
+          <div class="middle-section">
+            <a href="/index/about.html">
+              <span>About</span>
+            </a>
+            <a href="/index/contact.html">
+              <p>Help</p>
+            </a>
+            <a href="https://tools.usps.com/go/TrackConfirmAction_input">
+              <p>Shipping</p>
+            </a>
+          </div>
+          <div class="middle-section">
+            <a href="/index/about.html">
+              <span>Info</span>
+            </a>
+            <a href="/index/contact.html">
+              <p>Contact</p>
+            </a>
+            <a href="/index/about.html">
+              <p>Term & Condition</p>
+            </a>
+          </div>
+          <div class="social-icons-container">
+            <img src="/assets/images/Icon-1.png" alt="" class="social-icon" />
+            <img src="/assets/images/Icon-2.png" alt="" class="social-icon" />
+            <img src="/assets/images/Icon-3.png" alt="" class="social-icon" />
+            <img src="/assets/images/Icon-4.png" alt="" class="social-icon" />
+          </div>
+        </footer>
+        <div class="copy">&#169; 2018. All rights reserved</div>
+      </section>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
