@@ -14,7 +14,7 @@
   --text-color: #ffffff;
   --main-color: #000;
   --font-style: normal;
-  --active-color:#a23095ba;
+  --active-color: #a23095ba;
 }
 
 body {
@@ -132,7 +132,6 @@ header {
   display: none;
 }
 
-
 /* Productpage */
 .productSummary {
   width: 100%;
@@ -141,9 +140,9 @@ header {
       rgba(0, 69, 255, 0.4)
     ),
     url(/assets/images/BG2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: -140px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -140px;
 }
 
 .productSummary {
@@ -230,11 +229,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #DBDEE7;
+  border: 1px solid #dbdee7;
   border-radius: 8px;
   padding: 16px;
   cursor: pointer;
-  color:#000;
+  color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -242,10 +241,9 @@ header {
 }
 
 .selectClicked {
-  border: 1px solid #0045FF;
+  border: 1px solid #0045ff;
   box-shadow: 0 0 13px #26489a;
 }
-
 
 .caret {
   width: 0;
@@ -262,11 +260,11 @@ header {
 .menu {
   list-style: none;
   padding: 3px 8px;
-  border: 1px solid #DBDEE7;
+  border: 1px solid #dbdee7;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-top: 25px;
-  color:#000;
+  color: #000;
   position: absolute;
   top: 48px;
   left: 50%;
@@ -285,7 +283,7 @@ header {
 }
 
 .menu li:hover {
-  background-color: #0045FF;
+  background-color: #0045ff;
   color: #fff;
 }
 
@@ -320,8 +318,8 @@ header {
   width: 358px;
   height: 60px;
   border-radius: 6px;
-  background:#0045FF;
-  color: #FFF;
+  background: #0045ff;
+  color: #fff;
   text-align: center;
   font-size: 20px;
   font-style: normal;
@@ -390,7 +388,6 @@ header {
   font-weight: 700;
   line-height: 32px;
 }
-
 
 /* Footer */
 .footerContainer {

@@ -51,7 +51,6 @@
   white-space: nowrap;
 }
 
-
 .tableContainer table thead {
   color: #000;
   font-size: 16px;
@@ -81,7 +80,6 @@
   height: 22px;
   color: #0045ff;
 }
-
 
 .tableContainer table td:nth-child(1) {
   width: 100px;

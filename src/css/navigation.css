@@ -1,0 +1,158 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 0 12%;
+  background-color: var(--bg-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 20px;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar a.active {
+  color: var(--active-color);
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+}
+
+.cartContainer a {
+  margin-right: 10px;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.cart {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart svg {
+  width: 100%;
+}
+
+.cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 18px;
+  color: var(--text-color);
+  background-color: #09ad2d;
+  text-align: center;
+  font-size: 3px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.cartCount {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  color: var(--text-color);
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+}
+
+#menu-icon {
+  font-size: 35px;
+  margin-left: 30px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  header {
+    padding: 14px 2%;
+  }
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+@media (max-width: 1090px) {
+  #menu-icon {
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+  }
+  .cartContainer {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+    top: 80%;
+    right: 2%;
+    width: 270px;
+    height: 29vh;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+  .navbar a {
+    color: var(--main-color);
+    display: block;
+    margin: 12px 0;
+    text-align: left;
+    padding: 0 25px;
+  }
+
+  .navbar a.active {
+    color: var(--active-color);
+  }
+
+  .navbar.open {
+    right: 2%;
+  }
+}
