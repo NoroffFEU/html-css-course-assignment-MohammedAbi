@@ -1,16 +1,151 @@
-.productSpecific {
-  min-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;900&family=Poppins:ital,wght@0,800;0,900;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bg-color: #0045ff;
+  --text-color: #ffffff;
+  --main-color: #000;
+  --font-style: normal;
+  --active-color:#a23095ba;
+}
+
+body {
+  color: var(--text-color);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  background-color: var(--bg-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 50px;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar a.active {
+  color: var(--active-color);
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+}
+
+.cartContainer a {
+  margin-right: 10px;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.cart {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart svg {
+  width: 100%;
+}
+
+.cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 18px;
+  color: var(--text-color);
+  background-color: #09ad2d;
+  text-align: center;
+  font-size: 3px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.cartCount {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  color: var(--text-color);
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+}
+
+#menu-icon {
+  font-size: 35px;
+  margin-left: 30px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+
+/* Productpage */
+.productSummary {
   width: 100%;
   background-image: linear-gradient(
-      rgba(0, 69, 255, 0.3),
-      rgba(0, 69, 255, 0.301)
+      rgba(0, 69, 255, 0.4),
+      rgba(0, 69, 255, 0.4)
     ),
     url(/assets/images/BG2.png);
-  background-position: top;
-  background-size: Cover;
-  background-repeat: no-repeat;
-  position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -140px;
 }
+
 .productSummary {
   display: block;
   align-items: center;
@@ -23,7 +158,7 @@
   font-style: italic;
   font-weight: 900;
   line-height: 64px;
-  margin-top: 370px;
+  padding-top: 370px;
   margin-bottom: 314px;
 }
 
@@ -205,7 +340,7 @@
 .popularItems {
   display: block;
   background-color: #0037cc;
-  padding: 18px 125px 155px 152px;
+  padding: 18px 20px;
 }
 
 .popularItems h2 {
@@ -254,4 +389,89 @@
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
+}
+
+
+/* Footer */
+.footerContainer {
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d2deff;
+}
+
+.mainFooter {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 100px 40px 40px 40px;
+}
+
+.leftside {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding-left: 150px;
+}
+
+.mainFooter p {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.mainFooter a {
+  text-decoration: none;
+}
+
+.leftSide img {
+  width: 46px;
+  height: 46px;
+  background-color: #0045ff;
+  opacity: 0.75;
+  border-radius: 50%;
+  margin-bottom: 55px;
+}
+
+.middleSide span {
+  color: var(--main-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.middleSide p {
+  color: var(--main-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.socialIconsContainer {
+  display: inline-block;
+  background-color: transparent;
+  margin-right: 178px;
+}
+
+.socialIconsContainer img {
+  margin-right: 16px;
+}
+
+.CopyRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CopyRight a {
+  color: var(--main-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding-bottom: 10px;
 }

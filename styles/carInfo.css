@@ -47,8 +47,10 @@
 .tableContainer table {
   border-collapse: collapse;
   width: 100%;
-  table-layout: fixed;
+  table-layout: flex;
+  white-space: nowrap;
 }
+
 
 .tableContainer table thead {
   color: #000;
