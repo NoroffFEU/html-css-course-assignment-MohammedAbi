@@ -1,24 +1,20 @@
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
-  padding: 0 12%;
+  padding: 0 20px;
   background-color: var(--bg-color);
+  padding: 20px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 60px;
   height: 60px;
   background-color: var(--text-color);
@@ -40,7 +36,7 @@ header {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0 20px;
+  margin-right:20px;
 }
 
 .navbar a:hover {
@@ -57,7 +53,7 @@ header {
 }
 
 .cartContainer a {
-  margin-right: 10px;
+  margin-left: 10px;
   color: var(--text-color);
   text-align: center;
   font-size: 16px;
@@ -103,12 +99,11 @@ header {
 
 #menu-icon {
   font-size: 35px;
-  margin-left: 30px;
+  margin-left: 10px;
   cursor: pointer;
   z-index: 10001;
-  display: none;
 }
-
+/* 
 @media (max-width: 1440px) {
   header {
     padding: 14px 2%;
@@ -155,4 +150,4 @@ header {
   .navbar.open {
     right: 2%;
   }
-}
+} */

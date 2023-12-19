@@ -14,7 +14,7 @@
   --text-color: #ffffff;
   --main-color: #000;
   --font-style: normal;
-  --active-color: #a23095ba;
+  --active-color: #63e009f5;
 }
 
 body {
@@ -22,26 +22,22 @@ body {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  height: auto;
-  top: 0;
-  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
-  padding: 28px 12%;
+  padding: 0 20px;
   background-color: var(--bg-color);
+  padding: 20px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 60px;
   height: 60px;
   background-color: var(--text-color);
@@ -63,7 +59,7 @@ header {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0 50px;
+  margin-right:20px;
 }
 
 .navbar a:hover {
@@ -80,7 +76,7 @@ header {
 }
 
 .cartContainer a {
-  margin-right: 10px;
+  margin-left: 10px;
   color: var(--text-color);
   text-align: center;
   font-size: 16px;
@@ -126,12 +122,11 @@ header {
 
 #menu-icon {
   font-size: 35px;
-  margin-left: 30px;
+  margin-left: 10px;
   cursor: pointer;
   z-index: 10001;
-  display: none;
 }
-
+ 
 /* Productpage */
 .productSummary {
   width: 100%;
@@ -162,10 +157,11 @@ header {
 }
 
 .productSpecificContainer {
+  width: 100%;
   position: relative;
   background-color: #fff;
-  display: flex;
   padding: 20px 40px;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
@@ -180,14 +176,10 @@ header {
 
 .productDetails img {
   width: 100%;
-  height: fit-content;
-  padding: 20px 40px;
-  align-items: flex-start;
 }
 .productDescription {
   width: 100%;
   display: inline-block;
-  margin: 20px 40px;
   padding: 0 40px;
 }
 .productDescription h2 {
@@ -289,7 +281,7 @@ header {
 
 /* active styles (add later in javascript) */
 .active {
-  background-color: #475f9f;
+  color: var(--active-color);
 }
 
 /* Open styles (add later in javascript) */
@@ -315,7 +307,7 @@ header {
 .action button {
   align-items: center;
   justify-content: center;
-  width: 358px;
+  width: 330px;
   height: 60px;
   border-radius: 6px;
   background: #0045ff;
@@ -356,11 +348,11 @@ header {
   justify-content: space-between;
 }
 
-.popularItemsList {
+/* .popularItemsList {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-}
+} */
 
 .popularItemsList img {
   width: 131px;

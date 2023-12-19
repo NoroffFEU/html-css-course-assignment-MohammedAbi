@@ -1,15 +1,28 @@
-.hero-content h1 {
-  color: #fff;
+.heroContainer {
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(0, 69, 255, 0.75),
+      rgba(0, 69, 255, 0.75)
+    ),
+    url(/assets/images/BG.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.hero h1 {
+  color: var(--text-color);
   text-align: center;
   font-size: 58px;
   font-style: italic;
   font-weight: 900;
   line-height: 64px;
-  margin-top: 256px;
+  padding-top: 256px;
 }
 
-.hero-content p {
-  color: #fff;
+.hero p {
+  color: var(--text-color);
   text-align: center;
   font-size: 18px;
   font-style: italic;
@@ -25,7 +38,7 @@
   margin-top: 91px;
 }
 
-.cta .shop-now {
+.cta .shopButton {
   display: flex;
   width: 200px;
   height: 48px;
@@ -33,7 +46,7 @@
   align-items: center;
   border-radius: 6px;
   background: #ffaa06;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -41,16 +54,16 @@
   border: none;
   margin-right: 21px;
 }
-.cta .shop-now a,
-.discover-collections a {
+.cta .shopButton a,
+.collectionButton a {
   text-decoration: none;
 }
 
-.cta .discover-collections {
+.cta .collectionButton {
   width: 317px;
   height: 48px;
   border-radius: 6px;
-  background: #fff;
+  background: var(--text-color);
   color: #000;
   text-align: center;
   font-size: 16px;
@@ -60,8 +73,8 @@
   border: none;
 }
 
-.quality-description p {
-  color: #fff;
+.qualityDescription p {
+  color: var(--text-color);
   text-align: center;
   font-size: 12px;
   font-style: italic;
@@ -70,49 +83,54 @@
   margin-top: 91px;
 }
 
-.testimonial-section h1 {
-  background-color: white;
-  color: #000;
+.feedbackCustomers {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.testimonial h1 {
+  background-color: var(--text-color);
+  color: var(--main-color);
   text-align: center;
   font-size: 36px;
   font-style: normal;
   font-weight: 900;
   line-height: 52px;
   margin-top: 104px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 151px;
 }
 
-.feedback-container {
+.feedbackContainer {
+  position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.feedback-item {
+.feedbackItem {
+  position: relative;
   width: 100%;
-  height: 100%;
-  background-color: #0045ff;
+  height: auto;
+  background-color: var(--bg-color);
   border-radius: 6px;
-  margin: 0 64px;
-  padding: 40px;
+  margin: 0 20px;
+  padding: 20px;
   margin-bottom: 209px;
 }
 
-.feedback-item p {
-  color: #fff;
+.feedbackItem p {
+  color: var(--text-color);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 34px;
-  padding: 32px 37px 0;
+  padding: 20px;
 }
 
-.feedback-item img {
+.feedbackItem img {
+  position: relative;
   width: 38px;
   height: 36px;
   border-radius: 50%;
@@ -120,15 +138,15 @@
   margin-top: 60px;
 }
 
-.user-info {
+.userInfo {
   display: inline-block;
   align-items: center;
   justify-content: center;
 }
 
-.user-info p {
+.userInfo p {
   display: block;
-  color: #fff;
+  color: var(--text-color);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -140,9 +158,9 @@
   margin-left: 10px;
 }
 
-.user-info span {
+.userInfo span {
   display: block;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
