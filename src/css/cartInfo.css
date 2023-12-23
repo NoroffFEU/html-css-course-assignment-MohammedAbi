@@ -28,6 +28,7 @@
 .cartstatusIndicator:first-child {
   background-color: var(--bg-color);
   border-radius: 6px 0px 0px 6px;
+  border: none;
   color: var(--text-color);
 }
 

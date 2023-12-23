@@ -1,0 +1,120 @@
+.cartInfo {
+  display: block;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding: 174px;
+}
+.cartstatusIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 158px;
+  height: 48px;
+  color: var(--main-color);
+  font-size: 16px;
+  font-style: var(--font-style);
+  font-weight: 700;
+  line-height: 24px;
+  border: 0.5px solid #dbdee7;
+}
+
+.cartstatusIndicator:nth-child(2) {
+  background-color: var(--bg-color);
+  border: none;
+  color: var(--text-color);
+}
+
+.cartInfo h1 {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 46px;
+  font-style: var(--font-style);
+  font-weight: 900;
+  line-height: 64px;
+  margin-bottom: 66px;
+}
+
+/* .delivery {
+  max-width: 750px;
+  align-content: center;
+  display: inline-block;
+  justify-content: center;
+  background-color: red;
+  margin: 0 auto; */
+
+.delivery {
+  margin: 0 auto;
+  width: 750px;
+}
+
+.inputs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.inputs form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs input {
+  margin: 24px 30px;
+  color: var(--main-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  border: 1px solid #dbdee7;
+  border-radius: 6px;
+}
+.inputs input[type="text"] {
+  padding: 14px 24px;
+}
+.ctaCart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 37px;
+  margin-bottom: 113px;
+}
+
+.ctaCart p {
+  color: var(--main-color);
+  font-size: 18px;
+  font-style: var(--font-style);
+  font-weight: 400;
+  line-height: 32px;
+}
+.ctaCart p .ion-icon {
+  font-size: 16px;
+  color: var(--main-color);
+  margin-right: 10px;
+  align-items: bottom;
+}
+.ctaCart .submitButton {
+  border-radius: 6px;
+  width: 293px;
+  height: 60px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  font-size: 20px;
+  font-style: var(--font-style);
+  font-weight: 700;
+  line-height: 34px;
+  border: none;
+}
