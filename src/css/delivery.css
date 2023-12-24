@@ -26,6 +26,12 @@
   line-height: 24px;
   border: 0.5px solid #dbdee7;
 }
+.cartstatusIndicator:nth-child(1) {
+  border-radius: 6px 0px 0px 6px;
+}
+.cartstatusIndicator:nth-child(4) {
+  border-radius: 0px 6px 6px 0px;
+}
 
 .cartstatusIndicator:nth-child(2) {
   background-color: var(--bg-color);
@@ -43,17 +49,10 @@
   margin-bottom: 66px;
 }
 
-/* .delivery {
-  max-width: 750px;
-  align-content: center;
-  display: inline-block;
-  justify-content: center;
-  background-color: red;
-  margin: 0 auto; */
-
 .delivery {
   margin: 0 auto;
-  width: 750px;
+  max-width: 750px;
+  padding: 20px;
 }
 
 .inputs {
@@ -82,6 +81,7 @@
 }
 .inputs input[type="text"] {
   padding: 14px 24px;
+  max-width: 360px;
 }
 .ctaCart {
   width: 100%;
@@ -117,4 +117,13 @@
   font-weight: 700;
   line-height: 34px;
   border: none;
+}
+
+#address {
+  position: relative;
+  width: 555px;
+}
+#zipCode {
+  position: relative;
+  width: 165px;
 }
