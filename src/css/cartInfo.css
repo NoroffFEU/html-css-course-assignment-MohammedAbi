@@ -200,8 +200,7 @@
 
 /* Responsive styles for tablets */
 
-
-
+/* 
 @media only screen and (max-width: 768px) {
   .cartInfo {
     padding: 0 20px;
@@ -248,10 +247,10 @@
     font-size: 16px;
     line-height: 26px;
   }
-}
+} */
 
 /* Responsive styles for mobile devices */
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   .cartInfo {
     padding: 0 10px;
   }
@@ -292,4 +291,4 @@
     font-size: 14px;
     line-height: 22px;
   }
-}
+} */
