@@ -15,7 +15,6 @@
 </head>
 
 <body>
-  <!-- Custom js links -->
   <div class="container">
     <header>
       <a href="#" class="logo"><img src="/assets/images/logo.png"
@@ -29,13 +28,22 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+
+      <ul class="sideBar">
+        <li><a href="#"><a onclick="hideSideBar()" href="#"><i class="bx bx-md bx-x"></i></a></a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
       <div class="icons">
         <a href="#"><i class="bx bx-sm bx-shopping-bag"><span class="counter">2</span></i>
         </a>
-        <a href="#">Cart</a>
-        <a href="#"><i class="bx bx-sm bx-menu"></i></a>
-        <a href="#"><i class="bx bx-sm bx-x"></i></a>
+        <a onclick="showSidebar()" href="#"><i class="bx bx-md bx-menu"></i></a>
       </div>
+
     </header>
   </div>
   <div class="container">
@@ -174,7 +182,7 @@
     </section>
   </div>
   <!-- Custom js links -->
-  <script src="/java/test.js"></script>
+  <script src="/java/nav.js"></script>
 </body>
 
 </html>

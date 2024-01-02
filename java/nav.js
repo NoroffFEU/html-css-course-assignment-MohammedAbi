@@ -1,7 +1,9 @@
-let menu = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+function showSidebar() {
+  const sidebar = document.querySelector(".sideBar");
+  sidebar.style.display = "flex";
+}
+function hideSideBar() {
+  const sidebar = document.querySelector(".sideBar");
+  sidebar.style.display = "none";
+}
 
-menu.onclick = () => {
-  menu.classList.toggle("bx-x");
-  navbar.classList.toggle("open");
-};
