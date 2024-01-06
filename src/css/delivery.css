@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   padding: 174px;
 }
 .cartstatusIndicator {
@@ -26,6 +25,7 @@
   line-height: 24px;
   border: 0.5px solid #dbdee7;
 }
+
 .cartstatusIndicator:nth-child(1) {
   border-radius: 6px 0px 0px 6px;
 }
@@ -51,7 +51,6 @@
 
 .delivery {
   margin: 0 auto;
-  max-width: 750px;
   padding: 20px;
 }
 
@@ -126,4 +125,134 @@
 #zipCode {
   position: relative;
   width: 165px;
+}
+/* Desktop container utility class: */
+/* xl */
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+
+    .cartstatusIndicator:nth-child(1),
+    .cartstatusIndicator:nth-child(3),
+    .cartstatusIndicator:nth-child(4) {
+      display: none;
+    }
+    .cartstatusIndicator:nth-child(2) {
+      border-radius: 6px 6px 6px 6px;
+      margin: auto;
+      min-width: 200px;
+    }
+    .cartStatus {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 100px;
+    }
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+    input#address {
+      width: 237px;
+    }
+    .submitButton {
+      margin: 0 5px;
+      width: 50%;
+      font-size: 12px;
+    }
+    .inputs {
+      display: block;
+      margin: 0px;
+    }
+
+    .inputs form {
+      display: block;
+    }
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Mobile container utility class: */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }

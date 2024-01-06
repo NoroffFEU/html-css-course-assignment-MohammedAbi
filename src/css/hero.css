@@ -26,9 +26,11 @@
   color: var(--text-color);
   text-align: center;
   font-size: 18px;
+  font-family: Inter;
+  font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 32px; 
   margin-top: 101px;
 }
 
@@ -81,9 +83,8 @@
   font-style: italic;
   font-weight: 400;
   line-height: 18px;
-  margin-top: 91px;
+  margin: 91px 0 439px 0;
 }
-
 .feedbackCustomers {
   position: relative;
   width: 100%;

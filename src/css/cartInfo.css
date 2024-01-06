@@ -240,6 +240,7 @@
      .cartstatusIndicator:nth-child(1){
         border-radius: 6px 6px 6px 6px;
         min-width: 200px;
+        margin: auto;
      }
      .cartStatus {
         display: flex;
