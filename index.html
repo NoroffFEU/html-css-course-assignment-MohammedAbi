@@ -1,189 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to our e-commerce website offering a wide selection of rain jackets for men and women. Browse through our collection and find the perfect waterproof and stylish jacket to keep you protected from the rain. Explore our homepage now!"
+    />
+    <title>Rainy Days home page</title>
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/variables.css" />
+    <link rel="stylesheet" href="/src/css/navigation.css" />
+    <link rel="stylesheet" href="/src/css/hero.css" />
+    <link rel="stylesheet" href="/src/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Welcome to our e-commerce website offering a wide selection of rain jackets for men and women. Browse through our collection and find the perfect waterproof and stylish jacket to keep you protected from the rain. Explore our homepage now!" />
-  <title>Rainy Days home page</title>
-  <link rel="stylesheet" href="/src/css/reset.css" />
-  <link rel="stylesheet" href="/src/css/variables.css">
-  <link rel="stylesheet" href="/src/css/navigation.css" />
-  <link rel="stylesheet" href="/src/css/hero.css" />
-  <link rel="stylesheet" href="/src/css/footer.css" />
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="index.html" class="logo"
+          ><img
+            src="/assets/images/logo.png"
+            alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
+        /></a>
+        <ul class="navbar">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="/index/productPage.html">Men</a></li>
+          <li><a href="/index/productPage.html">Women</a></li>
+        </ul>
+        <ul class="navbar">
+          <li><a href="/index/aboutPage.html">About</a></li>
+          <li><a href="/index/contactPage.html">Contact</a></li>
+        </ul>
 
-<body>
-  <div class="container">
-    <header>
-      <a href="#" class="logo"><img src="/assets/images/logo.png"
-          alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women." /></a>
-      <ul class="navbar">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="/index/productPage.html">Men</a></li>
-        <li><a href="/index/productPage.html">Women</a></li>
-      </ul>
-      <ul class="navbar">
-        <li><a href="/index/aboutPage.html">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <ul class="sideBar">
-        <li><a href="#"><a onclick="hideSideBar()" href="#"><i class="bx bx-md bx-x"></i></a></a></li>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Cart</a></li>
-      </ul>
-      <div class="icons">
-        <a href="#"><i class="bx bx-sm bx-shopping-bag"><span class="counter">2</span></i>
-        </a>
-        <a onclick="showSidebar()" href="#"><i class="bx bx-md bx-menu"></i></a>
-      </div>
-
-    </header>
-  </div>
-  <div class="container">
-    <section class="heroContainer">
-      <div class="hero">
-        <h1>Pushing the Comfort Zone</h1>
-        <p>
-          Your destination for premium men's and women's rain jackets designed
-          to enhance your <br />
-          outdoor adventures
-        </p>
-        <div class="cta">
-          <button class="shopButton">
-            <a href="/index/productPage.html"
-              alt="Looking for stylish and functional rain jackets for both men and women? Click here to shop now and explore our collection of high-quality rain jackets perfect for any weather.">Shop
-              Now</a>
-          </button>
-          <button class="collectionButton">
-            <a href="index/productPage.html"
-              alt="Find a wide range of high-quality rain jackets for men and women on our e-commerce website. Click here to discover our collections and stay stylish and dry in any weather.">Discover
-              Our Collections</a>
-          </button>
+        <ul class="sideBar">
+          <li>
+            <a href="#"
+              ><a onclick="hideSideBar()" href="#"
+                ><i class="bx bx-md bx-x"></i></a
+            ></a>
+          </li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="/index/productPage.html">Men</a></li>
+          <li><a href="/index/productPage.html">Women</a></li>
+          <li><a href="/index/aboutPage.html">About</a></li>
+          <li><a href="/index/contactPage.html">Contact</a></li>
+          <li><a href="/index/cartInfo.html">Cart</a></li>
+        </ul>
+        <div class="icons">
+          <a href="/index/cartInfo.html"
+            ><i class="bx bx-sm bx-shopping-bag"
+              ><span class="counter">2</span></i
+            >
+          </a>
+          <a onclick="showSidebar()" href="#"
+            ><i class="bx bx-md bx-menu"></i
+          ></a>
         </div>
-        <div class="qualityDescription">
-          <p>Built to keep you comfortable during your outdoor pursuits</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="container">
-    <section class="feedbackCustomers">
-      <div class="testimonial">
-        <h1>Check What People Say</h1>
-      </div>
-      <div class="feedbackContainer">
-        <div class="feedbackItem">
+      </header>
+    </div>
+    <div class="container">
+      <section class="heroContainer">
+        <div class="hero">
+          <h1>Pushing the Comfort Zone</h1>
           <p>
-            “Amazing experience I love it a lot. Thanks to the team that
-            dreams come true, great! Really appreciate their approach”
+            Your destination for premium men's and women's rain jackets designed
+            to enhance your <br />
+            outdoor adventures
           </p>
-          <img src="/assets/images/user1.png"
-            alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence." />
-          <div class="userInfo">
-            <p>Lassy Chester</p>
-            <span>Art Director</span>
+          <div class="cta">
+            <button class="shopButton">
+              <a
+                href="/index/productPage.html"
+                alt="Looking for stylish and functional rain jackets for both men and women? Click here to shop now and explore our collection of high-quality rain jackets perfect for any weather."
+                >Shop Now</a
+              >
+            </button>
+            <button class="collectionButton">
+              <a
+                href="index/productPage.html"
+                alt="Find a wide range of high-quality rain jackets for men and women on our e-commerce website. Click here to discover our collections and stay stylish and dry in any weather."
+                >Discover Our Collections</a
+              >
+            </button>
+          </div>
+          <div class="qualityDescription">
+            <p>Built to keep you comfortable during your outdoor pursuits</p>
           </div>
         </div>
-        <div class="feedbackItem">
-          <p>
-            “Amazing experience I love it a lot. Thanks to the team that
-            dreams come true, great! Really appreciate their approach”
-          </p>
-          <img src="/assets/images/user2.png"
-            alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence." />
-          <div class="userInfo">
-            <p>Lassy Chester</p>
-            <span>Art Director</span>
+      </section>
+    </div>
+    <div class="container">
+      <section class="feedbackCustomers">
+        <div class="testimonial">
+          <h1>Check What People Say</h1>
+        </div>
+        <div class="feedbackContainer">
+          <div class="feedbackItem">
+            <p>
+              “Amazing experience I love it a lot. Thanks to the team that
+              dreams come true, great! Really appreciate their approach”
+            </p>
+            <img
+              src="/assets/images/user1.png"
+              alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence."
+            />
+            <div class="userInfo">
+              <p>Lassy Chester</p>
+              <span>Art Director</span>
+            </div>
+          </div>
+          <div class="feedbackItem">
+            <p>
+              “Amazing experience I love it a lot. Thanks to the team that
+              dreams come true, great! Really appreciate their approach”
+            </p>
+            <img
+              src="/assets/images/user2.png"
+              alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence."
+            />
+            <div class="userInfo">
+              <p>Lassy Chester</p>
+              <span>Art Director</span>
+            </div>
+          </div>
+          <div class="feedbackItem">
+            <p>
+              “Amazing experience I love it a lot. Thanks to the team that
+              dreams come true, great! Really appreciate their approach”
+            </p>
+            <img
+              src="/assets/images/user3.png"
+              alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence."
+            />
+            <div class="userInfo">
+              <p>Lassy Chester</p>
+              <span>Art Director</span>
+            </div>
           </div>
         </div>
-        <div class="feedbackItem">
-          <p>
-            “Amazing experience I love it a lot. Thanks to the team that
-            dreams come true, great! Really appreciate their approach”
-          </p>
-          <img src="/assets/images/user3.png"
-            alt="Looking for feedback on rainy days? Check out these photos of user feedback for our e-commerce website that sells men and women rain jackets. See what our satisfied customers have to say about our products and shop with confidence." />
-          <div class="userInfo">
-            <p>Lassy Chester</p>
-            <span>Art Director</span>
+      </section>
+    </div>
+    <div class="container">
+      <section class="footerContainer">
+        <footer class="mainFooter">
+          <div class="leftSide">
+            <a href="index.html">
+              <img
+                class="logoFooter"
+                src="/assets/images/logo.png"
+                alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
+              />
+            </a>
+            <p>- We create beauty</p>
           </div>
+          <div class="middleSide">
+            <a href="index.html">
+              <span>Store</span>
+            </a>
+            <a href="/index/productPage.html">
+              <p>New Season</p>
+            </a>
+            <a href="/index/productPage.html">
+              <p>Most Sold</p>
+            </a>
+          </div>
+          <div class="middleSide">
+            <a href="/index/aboutPage.html">
+              <span>About</span>
+            </a>
+            <a href="/index/contact.html">
+              <p>Help</p>
+            </a>
+            <a href="https://tools.usps.com/go/TrackConfirmAction_input">
+              <p>Shipping</p>
+            </a>
+          </div>
+          <div class="middleSide">
+            <a href="/index/aboutPage.html">
+              <span>Info</span>
+            </a>
+            <a href="/index/contactPage.html">
+              <p>Contact</p>
+            </a>
+            <a href="/index/aboutPage.html">
+              <p>Term & Condition</p>
+            </a>
+          </div>
+          <div class="socialIconsContainer">
+            <i
+              class="bx bxl-twitter"
+              alt="Get in touch with us through our Twitter page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
+            ></i>
+            <i
+              class="bx bxl-facebook"
+              alt="Get in touch with us through our Facebook page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
+            ></i>
+            <i
+              class="bx bxl-google"
+              alt="Get in touch with us through our Gmail to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
+            ></i>
+            <i
+              class="bx bxl-instagram"
+              alt="Get in touch with us through our Instagram page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
+            ></i>
+          </div>
+        </footer>
+        <div class="CopyRight">
+          <a href="">&#169; 2018. All rights reserved</a>
         </div>
-      </div>
-    </section>
-  </div>
-  <div class="container">
-    <section class="footerContainer">
-      <footer class="mainFooter">
-        <div class="leftSide">
-          <a href="index.html">
-            <img class="logoFooter" src="/assets/images/logo.png"
-              alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women." />
-          </a>
-          <p>- We create beauty</p>
-        </div>
-        <div class="middleSide">
-          <a href="index.html">
-            <span>Store</span>
-          </a>
-          <a href="/index/productPage.html">
-            <p>New Season</p>
-          </a>
-          <a href="/index/productPage.html">
-            <p>Most Sold</p>
-          </a>
-        </div>
-        <div class="middleSide">
-          <a href="/index/about.html">
-            <span>About</span>
-          </a>
-          <a href="/index/contact.html">
-            <p>Help</p>
-          </a>
-          <a href="https://tools.usps.com/go/TrackConfirmAction_input">
-            <p>Shipping</p>
-          </a>
-        </div>
-        <div class="middleSide">
-          <a href="/index/about.html">
-            <span>Info</span>
-          </a>
-          <a href="/index/contact.html">
-            <p>Contact</p>
-          </a>
-          <a href="/index/about.html">
-            <p>Term & Condition</p>
-          </a>
-        </div>
-        <div class="socialIconsContainer">
-          <img src="/assets/images/Icon-1.png"
-            alt="Get in touch with us through our Twitter page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-            class="social-icon" />
-          <img src="/assets/images/Icon-2.png"
-            alt="Get in touch with us through our Facebook page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-            class="social-icon" />
-          <img src="/assets/images/Icon-3.png"
-            alt="Get in touch with us through our Gmail to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-            class="social-icon" />
-          <img src="/assets/images/Icon-4.png"
-            alt="Get in touch with us through our Instagram page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-            class="social-icon" />
-        </div>
-      </footer>
-      <div class="CopyRight">
-        <a href="">&#169; 2018. All rights reserved</a>
-      </div>
-    </section>
-  </div>
-  <!-- Custom js links -->
-  <script src="/java/nav.js"></script>
-</body>
-
+      </section>
+    </div>
+    <!-- Custom js links -->
+    <script src="/java/nav.js"></script>
+  </body>
 </html>

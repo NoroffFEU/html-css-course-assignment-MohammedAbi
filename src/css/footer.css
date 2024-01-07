@@ -61,8 +61,9 @@
   background-color: transparent;
 }
 
-.socialIconsContainer img {
+.socialIconsContainer i {
   margin-right: 16px;
+  color: var(--bg-color);
 }
 
 .CopyRight {
@@ -85,13 +86,13 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-/* Desktop container utility class: */
+
 /* xl */
 @media (max-width: 1280px) {
   .container {
