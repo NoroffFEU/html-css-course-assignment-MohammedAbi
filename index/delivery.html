@@ -26,11 +26,8 @@
   <body>
     <div class="container">
       <header>
-        <a href="#" class="logo"
-          ><img
-            src="/assets/images/logo.png"
-            alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
-        /></a>
+        <a href="#" class="logo"><img src="/assets/images/logo.png"
+            alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women." /></a>
         <ul class="navbar">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Men</a></li>
@@ -40,13 +37,10 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-
+    
         <ul class="sideBar">
           <li>
-            <a href="#"
-              ><a onclick="hideSideBar()" href="#"
-                ><i class="bx bx-md bx-x"></i></a
-            ></a>
+            <a href="#"><a onclick="hideSideBar()" href="#"><i class="bx bx-md bx-x"></i></a></a>
           </li>
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Men</a></li>
@@ -56,14 +50,9 @@
           <li><a href="#">Cart</a></li>
         </ul>
         <div class="icons">
-          <a href="#"
-            ><i class="bx bx-sm bx-shopping-bag"
-              ><span class="counter">2</span></i
-            >
+          <a href="#"><i class="bx bx-sm bx-shopping-bag"><span class="counter">2</span></i>
           </a>
-          <a onclick="showSidebar()" href="#"
-            ><i class="bx bx-md bx-menu"></i
-          ></a>
+          <a onclick="showSidebar()" href="#"><i class="bx bx-md bx-menu"></i></a>
         </div>
       </header>
     </div>
@@ -76,76 +65,43 @@
           <div class="cartstatusIndicator">Reciept</div>
         </div>
         <h1>Delivery</h1>
-        <section class="delivery">
-          <div class="inputs">
-            <form action="/action_page.php">
-              <input
-                type="text"
-                id="fname"
-                name="fname"
-                value=""
-                placeholder="First name"
-              /><br />
-              <input
-                type="text"
-                id="fname"
-                name="fname"
-                value=""
-                placeholder="Last name"
-              /><br /><br />
-            </form>
-          </div>
-          <div class="inputs">
-            <form action="/action_page.php">
-              <div>
-                <input
-                  type="text"
-                  id="address"
-                  name="fname"
-                  value=""
-                  placeholder="Address"
-                /><br />
-              </div>
-              <input
-                type="text"
-                id="zipCode"
-                name="fname"
-                value=""
-                placeholder="Zip code"
-              /><br /><br />
-            </form>
-          </div>
-          <div class="inputs">
-            <form action="/action_page.php">
-              <input
-                type="text"
-                id="fname"
-                name="fname"
-                value=""
-                placeholder="City"
-              /><br />
-              <input
-                type="text"
-                id="fname"
-                name="fname"
-                value=""
-                placeholder="Country"
-              /><br /><br />
-            </form>
+        <div class="deliveryInputs">
+          <div class="gridContainer">
+            <div class="gridItem">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+            </div>
+            <div class="gridItem">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
+            </div>
+            <div class="gridItem" style="grid-column: span 2">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" placeholder="Address" />
+            </div>
+            <div class="gridItem">
+              <label for="zipCode">Zip Code:</label>
+              <input type="text" id="zipCode" name="zipCode" placeholder="Zip code" />
+            </div>
+            <div class="gridItem">
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" placeholder="City" />
+            </div>
+            <div class="gridItem">
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" placeholder="Country" />
+            </div>
           </div>
           <div class="ctaCart">
             <div>
               <p>
-                <ion-icon
-                  class="ion-icon"
-                  name="chevron-back-outline"
-                ></ion-icon>
+                <i class='bx bx-sx bx-chevron-left'></i>
                 Back to cart
               </p>
             </div>
             <button class="submitButton">Proceed to checkout</button>
           </div>
-        </section>
+        </div>
       </section>
     </div>
     <div class="container">
@@ -153,10 +109,8 @@
         <footer class="mainFooter">
           <div class="leftSide">
             <a href="index.html">
-              <img
-                src="/assets/images/logo.png"
-                alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
-              />
+              <img src="/assets/images/logo.png"
+                alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women." />
             </a>
             <p>- We create beauty</p>
           </div>
@@ -194,26 +148,18 @@
             </a>
           </div>
           <div class="socialIconsContainer">
-            <img
-              src="/assets/images/Icon-1.png"
+            <img src="/assets/images/Icon-1.png"
               alt="Get in touch with us through our Twitter page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-              class="social-icon"
-            />
-            <img
-              src="/assets/images/Icon-2.png"
+              class="social-icon" />
+            <img src="/assets/images/Icon-2.png"
               alt="Get in touch with us through our Facebook page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-              class="social-icon"
-            />
-            <img
-              src="/assets/images/Icon-3.png"
+              class="social-icon" />
+            <img src="/assets/images/Icon-3.png"
               alt="Get in touch with us through our Gmail to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-              class="social-icon"
-            />
-            <img
-              src="/assets/images/Icon-4.png"
+              class="social-icon" />
+            <img src="/assets/images/Icon-4.png"
               alt="Get in touch with us through our Instagram page to explore our e-commerce website that sells men and women rain jackets. Stay updated with our latest offerings and connect with us for any queries or assistance."
-              class="social-icon"
-            />
+              class="social-icon" />
           </div>
         </footer>
         <div class="CopyRight">
@@ -223,5 +169,5 @@
     </div>
     <!-- Custom js links -->
     <script src="/java/nav.js"></script>
-  </body>
+    </body>
 </html>

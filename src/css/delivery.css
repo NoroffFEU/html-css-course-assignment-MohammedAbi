@@ -47,8 +47,9 @@
   font-weight: 900;
   line-height: 64px;
   margin-bottom: 66px;
-}
 
+}
+/* 
 .delivery {
   margin: 0 auto;
   padding: 20px;
@@ -125,7 +126,72 @@
 #zipCode {
   position: relative;
   width: 165px;
+} */
+
+.deliveryInputs {
+  display: block;
 }
+.gridContainer {
+      display: grid;
+      grid-template-columns: repeat(1fr 2fr 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .gridItem {
+      text-align: left;
+    }
+    .gridItem label {
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      color: var(--main-color);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      border: 1px solid #dbdee7;
+      border-radius: 6px;
+      }
+      .ctaCart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 37px;
+        margin-bottom: 113px;
+      }
+
+.ctaCart p {
+  color: var(--main-color);
+  font-size: 18px;
+  font-style: var(--font-style);
+  font-weight: 400;
+  line-height: 32px;
+}
+.bx-chevron-left {
+  color: var(--main-color);
+  margin-right: 10px;
+  text-align: center;
+}
+.ctaCart .submitButton {
+  border-radius: 6px;
+  width: 293px;
+  height: 60px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  font-size: 20px;
+  font-style: var(--font-style);
+  font-weight: 700;
+  line-height: 34px;
+  border: none;
+}
+
+
 /* Desktop container utility class: */
 /* xl */
 .container {
@@ -156,7 +222,6 @@
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
-
     .cartstatusIndicator:nth-child(1),
     .cartstatusIndicator:nth-child(3),
     .cartstatusIndicator:nth-child(4) {
@@ -186,16 +251,9 @@
     .submitButton {
       margin: 0 5px;
       width: 50%;
-      font-size: 12px;
+      font-size: 14px;
     }
-    .inputs {
-      display: block;
-      margin: 0px;
-    }
-
-    .inputs form {
-      display: block;
-    }
+    
   }
 }
 
@@ -203,6 +261,9 @@
 @media (max-width: 475px) {
   .container {
     width: 100%;
+    .cartstatusIndicator:nth-child(2) {
+      margin-left: -10px;
+    }
   }
 }
 
