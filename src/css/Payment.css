@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 174px 174px 144px 174px;
+  padding: 174px 174px 60px 174px;
 }
 .cartstatusIndicator {
   display: flex;
@@ -50,7 +50,7 @@
   font-style: var(--font-style);
   font-weight: 900;
   line-height: 64px;
-  margin-bottom: 66px;
+  margin-bottom: 50px;
 }
 
 .paymentDetails p {
@@ -74,12 +74,25 @@
   grid-gap: 10px;
   margin: 0 auto;
   max-width: 768px;
+  position: relative;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
+}
+.expMonthContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.expMonthContainer i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: var(--main-color);
 }
 
 .formItem {
@@ -183,9 +196,9 @@
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
-    .formContainer {
-      width: 80%;
-      margin: 0 auto;
+    .formItem {
+      font-size: 12px;
+      line-height: 16px;
     }
   }
 }

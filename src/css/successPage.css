@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin-top: 174px;
+  padding: 174px 174px 60px 174px;
 }
 .cartstatusIndicator {
   display: flex;
@@ -54,7 +54,7 @@
   font-style: var(--font-style);
   font-weight: 900;
   line-height: 64px;
-  margin-bottom: 16px;
+  margin-bottom: 50px;
 }
 
 .paymentDetails p {
@@ -65,7 +65,7 @@
   font-weight: 400;
   line-height: 32px;
   max-width: 650px;
-  margin-bottom: 42px;
+  margin: 0 auto;
 }
 
 .delivery {
@@ -94,4 +94,125 @@
   line-height: 34px;
   border: none;
   margin-bottom: 161px;
+}
+
+/* Desktop container utility class: */
+/* xl */
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+    .cartstatusIndicator:nth-child(1),
+    .cartstatusIndicator:nth-child(2),
+    .cartstatusIndicator:nth-child(3) {
+      display: none;
+    }
+    .cartstatusIndicator:nth-child(4) {
+      border-radius: 6px 6px 6px 6px;
+      margin: auto;
+      min-width: 200px;
+    }
+    .cartStatus {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 100px;
+    }
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+    .cartstatusIndicator:nth-child(4) {
+      margin-left: -10px;
+    }
+    .ctaCart .submitButton {
+      width: 80%;
+      margin: -60px auto;
+    }
+  }
+}
+
+/* Mobile container utility class: */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
