@@ -1,4 +1,7 @@
-.shop h1 {
+/*
+    <!---------------------------------- Start product ----------------------------------------------->
+*/
+.container .shop h1 {
   color: var(--text-color);
   text-align: center;
   font-size: 58px;
@@ -16,16 +19,17 @@
   background-position: top center;
 }
 
-.collectionItems {
+.container .shop .collectionItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   align-items: center;
   gap: 32px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 110px;
 }
 
-.box {
+.shop .collectionItems .box {
   padding: 0 20px 10px 10px;
   background-color: transparent;
   box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
@@ -35,23 +39,23 @@
   padding-top: 2rem;
 }
 
-.box img {
+.shop .collectionItems .box img {
   width: 50%;
   height: auto;
 }
-.box h4 {
+.shop .collectionItems .box h4 {
   color: var(--main-color);
   font-size: 15px;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
-.box h5 {
+.shop .collectionItems .box h5 {
   color: var(--main-color);
   font-size: 14px;
   letter-spacing: px;
   margin-bottom: 20px;
 }
-.box .cart i {
+.shop .collectionItems .box .cart i {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,10 +70,16 @@
   align-items: center;
   justify-content: center;
 }
-.box:hover {
+.shop .collectionItems .box:hover {
   transform: translateY(-5px);
 }
+/*
+    <!---------------------------------- Start End ----------------------------------------------->
+*/
 
+/*
+    <!---------------------------------- Start mediaquery ----------------------------------------------->
+*/
 /* Desktop container utility class: */
 .container {
   width: 100%;
@@ -178,3 +188,6 @@
     max-width: 1536px;
   }
 }
+/*
+    <!---------------------------------- End mediaquery ----------------------------------------------->
+*/

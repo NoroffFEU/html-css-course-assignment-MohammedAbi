@@ -1,4 +1,7 @@
-.shop h1 {
+/*
+    <!---------------------------------- Start product specific ----------------------------------------------->
+*/
+.container .shop h1 {
   color: var(--text-color);
   text-align: center;
   font-size: 58px;
@@ -15,40 +18,7 @@
   background-size: cover;
   background-position: top center;
 }
-.shop p {
-  color: #000;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
-}
-.productDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 768px;
-  margin: 0 auto;
-}
-.productDescription p {
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
-  margin-bottom: 45px;
-  text-align: center;
-}
-
-.box h4 {
-  font-size: 46px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 64px;
-  color: #000;
-}
-
-.collectionItems {
+.container .shop .collectionItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1280px));
   align-items: center;
@@ -57,7 +27,7 @@
   cursor: pointer;
 }
 
-.box {
+.container .shop .box {
   padding: 0 10px 10px 10px;
   background-color: transparent;
   box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
@@ -67,11 +37,11 @@
   padding-top: 2rem;
 }
 
-.box img {
+.container .shop .box img {
   width: 50%;
   height: auto;
 }
-.box h4 {
+.container .shop .box h4 {
   color: var(--main-color);
   font-size: 46px;
   font-style: normal;
@@ -81,14 +51,14 @@
   margin-bottom: 8px;
 }
 
-.box h5 {
+.container .shop .box h5 {
   color: var(--main-color);
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
 
-.box .cart i {
+.container .shop .box .cart i {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,11 +73,29 @@
   align-items: center;
   justify-content: center;
 }
-.box:hover {
+.container .shop .box:hover {
   transform: translateY(-10px);
 }
 
-.header {
+.container .shop .box .productDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.container .shop .collectionItems .box .productDescription p {
+  color: var(--main-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 45px;
+  text-align: center
+}
+
+.container .shop .collectionItems .box .header {
   background-color: var(--text-color);
   display: flex;
   align-items: baseline;
@@ -117,7 +105,23 @@
   gap: 1rem;
 }
 
-.link {
+.header .dropdown {
+  position: relative;
+}
+
+.header .dropdown button {
+  width: 100%;
+  border: 1px solid #dbdee7;
+  padding: 20px 40px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.header .dropdown button i {
+  margin-left: 25px;
+}
+
+.dropdown .link {
   background: none;
   border: none;
   text-decoration: none;
@@ -128,28 +132,7 @@
   padding: 0.25rem;
 }
 
-.dropdown.active > .link,
-.link:hover {
-  color: black;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown button {
-  width: 100%;
-  border: 1px solid #dbdee7;
-  padding: 20px 40px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.dropdown button i {
-  margin-left: 25px;
-}
-
-.dropdown-menu {
+.dropdownContainer {
   position: absolute;
   left: 0;
   top: calc(100% + 0.25rem);
@@ -163,35 +146,42 @@
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown-heading {
-  display: none;
-}
-
 .dropdownContainer {
   display: inline-block;
   width: 100%;
 }
+
 .dropdownContainer a:hover {
   color: var(--text-color);
   background-color: #0045ff;
   width: 100%;
   text-align: left;
 }
-.dropdown-links {
+
+.dropdownHeading {
+  display: none;
+}
+
+.dropdownLinks {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   align-items: flex-start;
   width: 100%;
 }
-.dropdown-links.link {
+.dropdownLinks.link {
   width: 100%;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: black;
+}
+
+.dropdown.active > .link + .dropdownContainer {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .addToCart {
@@ -208,7 +198,13 @@
   border: none;
   margin-bottom: 2rem;
 }
+/*
+    <!---------------------------------- End product specific ----------------------------------------------->
+*/
 
+/*
+    <!---------------------------------- Start mediaquery ----------------------------------------------->
+*/
 /* Desktop container utility class: */
 .container {
   width: 100%;
@@ -350,3 +346,6 @@
     max-width: 1536px;
   }
 }
+/*
+    <!---------------------------------- End mediaquery ----------------------------------------------->
+*/

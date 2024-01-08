@@ -1,4 +1,7 @@
-.cartInfo {
+/* 
+<!---------------------------------- Start Payment ----------------------------------------------->
+ */
+.container .cartInfo {
   display: block;
   position: relative;
   width: 100%;
@@ -6,13 +9,13 @@
   justify-content: center;
 }
 
-.cartStatus {
+.container .cartInfo .cartStatus {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 174px 174px 60px 174px;
 }
-.cartstatusIndicator {
+.container .cartInfo .cartstatusIndicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,25 +28,25 @@
   line-height: 24px;
   border: 0.5px solid #dbdee7;
 }
-.cartstatusIndicator:nth-child(1) {
+.container .cartInfo .cartstatusIndicator:nth-child(1) {
   border-radius: 6px 0px 0px 6px;
 }
-.cartstatusIndicator:nth-child(4) {
+.container .cartInfo .cartstatusIndicator:nth-child(4) {
   border-radius: 0px 6px 6px 0px;
 }
 
-.cartstatusIndicator:nth-child(3) {
+.container .cartInfo .cartstatusIndicator:nth-child(3) {
   background-color: var(--bg-color);
   border: none;
   color: var(--text-color);
 }
 
-.paymentDetails {
+.container .cartInfo .paymentDetails {
   margin: 0 auto;
   padding: 20px;
 }
 
-.paymentDetails h1 {
+.container .cartInfo .paymentDetails h1 {
   color: var(--main-color);
   text-align: center;
   font-size: 46px;
@@ -53,7 +56,7 @@
   margin-bottom: 50px;
 }
 
-.paymentDetails p {
+.container .cartInfo .paymentDetails p {
   color: var(--main-color);
   text-align: center;
   font-size: 18px;
@@ -68,7 +71,8 @@
   margin: 0 auto;
   max-width: 750px;
 }
-.formContainer {
+
+.delivery .formContainer {
   display: grid;
   grid-template-rows: 1fr repeat(3, 1fr) 1fr;
   grid-gap: 10px;
@@ -77,18 +81,18 @@
   position: relative;
 }
 
-.formRow {
+.delivery .formContainer .formRow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
-.expMonthContainer {
+.delivery .formContainer .formRow .expMonthContainer {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.expMonthContainer i {
+.delivery .formContainer .formRow .expMonthContainer i {
   position: absolute;
   right: 10px;
   cursor: pointer;
@@ -116,20 +120,8 @@
   margin-bottom: 113px;
 }
 
-.ctaCart p {
-  color: var(--main-color);
-  font-size: 18px;
-  font-style: var(--font-style);
-  font-weight: 400;
-  line-height: 32px;
-}
-.ctaCart p .ion-icon {
-  font-size: 16px;
-  color: var(--main-color);
-  margin-right: 10px;
-  align-items: bottom;
-}
-.ctaCart .submitButton {
+
+.ctaCart a .submitButton {
   border-radius: 6px;
   width: 293px;
   height: 60px;
@@ -142,7 +134,13 @@
   line-height: 34px;
   border: none;
 }
+/* 
+<!---------------------------------- End Payment ----------------------------------------------->
+ */
 
+ /* 
+<!---------------------------------- Start mediaquery ----------------------------------------------->
+ */
 /* Desktop container utility class: */
 /* xl */
 .container {
@@ -271,3 +269,4 @@
     max-width: 1536px;
   }
 }
+<!---------------------------------- End mediaquery ----------------------------------------------->
