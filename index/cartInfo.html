@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="The cart overview page for our ecommerce website offers a convenient way for both men and women to view and manage the items they have added to their cart. Browse our collection of rain jackets and easily track your selected items on this page."
+      content="The cart overview page for our eCommerce website offers a convenient way for both men and women to view and manage the items they have added to their cart. Browse our collection of rain jackets and easily track your selected items on this page."
     />
     <title>Cart info</title>
     <link
@@ -24,6 +24,7 @@
   </head>
 
   <body>
+    <!---------------------------------- Start navigation ----------------------------------------------->
     <div class="container">
       <header>
         <a href="../index.html" class="logo"
@@ -67,13 +68,15 @@
         </div>
       </header>
     </div>
+    <!---------------------------------- End navigation ----------------------------------------------->
+    <!---------------------------------- Start cartInfo ----------------------------------------------->
     <div class="container">
       <div class="cartInfo">
         <div class="cartStatus">
-          <div class="cartstatusIndicator">Cart</div>
-          <div class="cartstatusIndicator">Delivery</div>
-          <div class="cartstatusIndicator">Payment</div>
-          <div class="cartstatusIndicator">Reciept</div>
+          <div class="cartStatusIndicator">Cart</div>
+          <div class="cartStatusIndicator">Delivery</div>
+          <div class="cartStatusIndicator">Payment</div>
+          <div class="cartStatusIndicator">Receipt</div>
         </div>
         <h1>Cart Info</h1>
         <div class="tableContainer">
@@ -103,7 +106,7 @@
                 <td class="productSize">52</td>
                 <td class="productColor">Red</td>
                 <td><input type="number" value="1" /></td>
-                <td class="productPrice">$ 142</td>
+                <td class="productPrice">$142</td>
                 <td>
                   <div class="deleteItem">x</div>
                 </td>
@@ -121,7 +124,7 @@
                 <td class="productSize">48</td>
                 <td class="productColor">Black</td>
                 <td><input type="number" value="1" /></td>
-                <td class="productPrice">$ 124</td>
+                <td class="productPrice">$124</td>
                 <td>
                   <div class="deleteItem">x</div>
                 </td>
@@ -139,7 +142,7 @@
                 <td class="productSize">50</td>
                 <td class="productColor">Black</td>
                 <td><input type="number" value="1" /></td>
-                <td class="productPrice">$ 175</td>
+                <td class="productPrice">$175</td>
                 <td>
                   <div class="deleteItem">x</div>
                 </td>
@@ -166,6 +169,9 @@
         </div>
       </div>
     </div>
+    <!---------------------------------- End Payment ----------------------------------------------->
+
+    <!---------------------------------- Start Footer ----------------------------------------------->
     <div class="container">
       <section class="footerContainer">
         <footer class="mainFooter">
@@ -236,6 +242,10 @@
         </div>
       </section>
     </div>
+    <!---------------------------------- End Footer ----------------------------------------------->
+
+    <!---------------------------------- Start javascript ----------------------------------------------->
     <script src="/java/nav.js"></script>
+    <!---------------------------------- End javascript ----------------------------------------------->
   </body>
 </html>

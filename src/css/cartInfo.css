@@ -1,15 +1,18 @@
-.cartInfo {
+/* 
+<!---------------------------------- Start cartInfo ----------------------------------------------->
+ */
+.container .cartInfo {
   display: block;
   width: 100%;
 }
 
-.cartStatus {
+.container .cartInfo .cartStatus {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 174px;
 }
-.cartstatusIndicator {
+.cartStatus .cartStatusIndicator {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,13 +26,13 @@
   border: 0.5px solid #dbdee7;
 }
 
-.cartstatusIndicator:first-child {
+.cartStatusIndicator:first-child {
   background-color: var(--bg-color);
   border-radius: 6px 0px 0px 6px;
   border: none;
   color: var(--text-color);
 }
-.cartstatusIndicator:nth-child(4) {
+.cartStatusIndicator:nth-child(4) {
   border-radius: 0px 6px 6px 0px;
 }
 
@@ -67,18 +70,6 @@
   padding-bottom: 16px;
 }
 
-.tableContainer table tbody td input {
-  max-width: 50px;
-  padding-left: 1px;
-  border: 1px solid #dbdee7;
-}
-
-.tableContainer table td {
-  padding: 20px;
-  text-align: start;
-  border-bottom: 1px solid #dbdee7;
-}
-
 .productImage {
   display: flex;
   max-width: 150px;
@@ -98,6 +89,7 @@
   font-weight: 700;
   line-height: 34px;
 }
+
 .tableContainer table td p {
   color: var(--main-color);
   font-size: 16px;
@@ -105,7 +97,17 @@
   font-weight: 400;
   line-height: 24px;
 }
+.tableContainer table tbody td input {
+  max-width: 50px;
+  padding-left: 1px;
+  border: 1px solid #dbdee7;
+}
 
+.tableContainer table td {
+  padding: 20px;
+  text-align: start;
+  border-bottom: 1px solid #dbdee7;
+}
 
 .productSize,
 .productPrice {
@@ -200,8 +202,13 @@
   line-height: 34px;
   border: none;
 }
+/* 
+<!---------------------------------- End cartInfo ----------------------------------------------->
+ */
 
-
+ /* 
+<!---------------------------------- Start media query ----------------------------------------------->
+ */
 /* Desktop container utility class: */
 /* xl */
 .container {
@@ -232,23 +239,23 @@
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
-    .cartstatusIndicator:nth-child(2),
-    .cartstatusIndicator:nth-child(3),
-    .cartstatusIndicator:nth-child(4){
-        display: none;
+    .cartStatusIndicator:nth-child(2),
+    .cartStatusIndicator:nth-child(3),
+    .cartStatusIndicator:nth-child(4) {
+      display: none;
     }
-     .cartstatusIndicator:nth-child(1){
-        border-radius: 6px 6px 6px 6px;
-        min-width: 200px;
-        margin: auto;
-     }
-     .cartStatus {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 100px;
-      }
-     
+    .cartStatusIndicator:nth-child(1) {
+      border-radius: 6px 6px 6px 6px;
+      min-width: 200px;
+      margin: auto;
+    }
+    .cartStatus {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px;
+    }
+
     .tableContainer table td h3 {
       color: var(--main-color);
       font-size: 14px;
@@ -279,35 +286,34 @@
   .container {
     max-width: 475px;
     .productImage {
-        display: none;
+      display: none;
     }
     .tableContainer table thead tr td:nth-child(1) {
-        display: none;
+      display: none;
     }
-    .tableContainer table tbody tr td:nth-child(1){
-        display: none;
+    .tableContainer table tbody tr td:nth-child(1) {
+      display: none;
     }
-    
+
     .tableContainer table thead {
       font-size: 12px;
     }
-    .tableContainer table tbody td{
+    .tableContainer table tbody td {
       font-size: 12px;
     }
-     .tableContainer table td h3 {
-        font-size: 12px;
-        line-height: 28px;
-      }
-      
-      .submitButton {
-        margin: 0 5px;
-        width: 50%;
-        font-size: 12px;
-      }
-      .ctaCart p {
-        font-size: 12px;
-      }
+    .tableContainer table td h3 {
+      font-size: 12px;
+      line-height: 28px;
+    }
 
+    .submitButton {
+      margin: 0 5px;
+      width: 50%;
+      font-size: 12px;
+    }
+    .ctaCart p {
+      font-size: 12px;
+    }
   }
 }
 
@@ -368,4 +374,6 @@
     max-width: 1536px;
   }
 }
-
+ /* 
+<!---------------------------------- End media query ----------------------------------------------->
+ */
