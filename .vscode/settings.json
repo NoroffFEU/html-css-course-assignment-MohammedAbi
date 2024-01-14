@@ -1,5 +1,6 @@
 {
   "liveServer.settings.port": 5502,
   "editor.tabCompletion": "on",
-  "emmet.triggerExpansionOnTab": false
+  "emmet.triggerExpansionOnTab": false,
+  "editor.semanticHighlighting.enabled": true
 }

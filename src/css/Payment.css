@@ -208,12 +208,18 @@
     .cartstatusIndicator:nth-child(3) {
       margin-left: -10px;
     }
-    .ctaCart .submitButton {
-      width: 80%;
-      margin: -60px auto;
+    .ctaCart {
+      margin-top: 0px;
+      margin-bottom: 66px;
     }
+    .delivery .formContainer {
+      display: grid;
+      grid-template-rows: 1fr repeat(3, 1fr) 1fr;
+      grid-gap: 5px;
+    }
+
     .formItem {
-      font-size: 12px;
+      font-size: 10px;
       line-height: 16px;
     }
   }

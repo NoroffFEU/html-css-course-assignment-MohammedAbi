@@ -175,7 +175,7 @@
   margin-top: 37px;
   margin-bottom: 113px;
 }
-.ctaCart p {
+.ctaCart p a {
   display: inline-flex;
   color: var(--main-color);
   font-size: 18px;
@@ -184,7 +184,7 @@
   line-height: 32px;
   align-items: center;
 }
-.ctaCart p i {
+.ctaCart p a i {
   font-size: 16px;
   margin-right: 10px;
 }
@@ -311,7 +311,7 @@
       width: 50%;
       font-size: 12px;
     }
-    .ctaCart p {
+    .ctaCart p a {
       font-size: 12px;
     }
   }
