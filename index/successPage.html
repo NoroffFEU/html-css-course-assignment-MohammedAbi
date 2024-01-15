@@ -27,49 +27,44 @@
     <!---------------------------------- Start navigation ----------------------------------------------->
     <div class="container">
       <header>
-        <a href="#" class="logo"
+        <a href="../index.html" class="logo"
           ><img
             src="/assets/images/logo.png"
             alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
         /></a>
         <ul class="navbar">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="/index/productPage.html">Men</a></li>
+          <li><a href="/index/productPage.html">Women</a></li>
         </ul>
         <ul class="navbar">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/index/aboutPage.html">About</a></li>
+          <li><a href="/index/contactPage.html">Contact</a></li>
         </ul>
 
         <ul class="sideBar">
           <li>
-            <a href="#"
-              ><a onclick="hideSideBar()" href="#"
-                ><i class="bx bx-md bx-x"></i></a
-            ></a>
+            <i class="bx bx-md bx-x" onclick="hideSideBar()"></i>
           </li>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Cart</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="/index/productPage.html">Men</a></li>
+          <li><a href="/index/productPage.html">Women</a></li>
+          <li><a href="/index/aboutPage.html">About</a></li>
+          <li><a href="/index/contactPage.html">Contact</a></li>
+          <li><a href="/index/cartInfo.html">Cart</a></li>
         </ul>
         <div class="icons">
-          <a href="#"
-            ><i class="bx bx-sm bx-shopping-bag"
+          <a href="/index/cartInfo.html"
+            ><i class="bx bx-md bx-shopping-bag"
               ><span class="counter">2</span></i
             >
           </a>
-          <a onclick="showSidebar()" href="#"
-            ><i class="bx bx-md bx-menu"></i
-          ></a>
+          <i class="bx bx-md bx-menu" onclick="showSidebar()"></i>
         </div>
       </header>
     </div>
     <!---------------------------------- End navigation ----------------------------------------------->
-    
+
     <!---------------------------------- Start success ----------------------------------------------->
     <div class="container">
       <section class="cartInfo">
@@ -174,6 +169,5 @@
     <!---------------------------------- Start javascript ----------------------------------------------->
     <script src="/java/nav.js"></script>
     <!---------------------------------- End javascript ----------------------------------------------->
-
   </body>
 </html>

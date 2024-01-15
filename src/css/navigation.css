@@ -163,23 +163,24 @@
 
 .counter {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: -3px;
-  right: -3px;
-  background-color: #09ad2d;
+  top: -10px;
+  right: -10px;
+  background-color: var(--main-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-color);
+  font-weight: 600;
   border: 1px solid;
   padding: 5px;
 }
 
 .icons i span {
-  font-size: 8px;
+  font-size: 14px;
 }
 /*
     <!---------------------------------- End navigation ----------------------------------------------->

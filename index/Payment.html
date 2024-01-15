@@ -44,10 +44,7 @@
 
         <ul class="sideBar">
           <li>
-            <a href="#"
-              ><a onclick="hideSideBar()" href="#"
-                ><i class="bx bx-md bx-x"></i></a
-            ></a>
+            <i class="bx bx-md bx-x" onclick="hideSideBar()"></i>
           </li>
           <li><a href="../index.html" class="active">Home</a></li>
           <li><a href="/index/productPage.html">Men</a></li>
@@ -58,13 +55,11 @@
         </ul>
         <div class="icons">
           <a href="/index/cartInfo.html"
-            ><i class="bx bx-sm bx-shopping-bag"
+            ><i class="bx bx-md bx-shopping-bag"
               ><span class="counter">2</span></i
             >
           </a>
-          <a onclick="showSidebar()" href="#"
-            ><i class="bx bx-md bx-menu"></i
-          ></a>
+          <i class="bx bx-md bx-menu" onclick="showSidebar()"></i>
         </div>
       </header>
     </div>
@@ -89,19 +84,44 @@
         </div>
         <section class="delivery">
           <div class="formContainer">
-            <input type="text" class="formItem" placeholder="Card Number" />
+            <label for="cardNumber" class="visuallyHidden">Card Number</label>
+            <input
+              type="text"
+              id="cardNumber"
+              class="formItem"
+              placeholder="Card Number"
+            />
             <div class="formRow">
               <div class="expMonthContainer">
-                <input type="text" class="formItem" placeholder="Exp. Month" />
+                <label for="expMonth" class="visuallyHidden">Exp. Month</label>
+                <input
+                  type="text"
+                  id="expMonth"
+                  class="formItem"
+                  placeholder="Exp. Month"
+                />
                 <i class="bx bx-chevron-down"></i>
               </div>
               <div class="expMonthContainer">
-                <input type="text" class="formItem" placeholder="Exp. Date" />
+                <label for="expDate" class="visuallyHidden">Exp. Date</label>
+                <input
+                  type="text"
+                  id="expDate"
+                  class="formItem"
+                  placeholder="Exp. Date"
+                />
                 <i class="bx bx-chevron-down"></i>
               </div>
-              <input type="text" class="formItem" placeholder="CVV" />
+              <label for="cvv" class="visuallyHidden">CVV</label>
+              <input type="text" id="cvv" class="formItem" placeholder="CVV" />
             </div>
-            <input type="text" class="formItem" placeholder="Card Holder" />
+            <label for="cardHolder" class="visuallyHidden">Card Holder</label>
+            <input
+              type="text"
+              id="cardHolder"
+              class="formItem"
+              placeholder="Card Holder"
+            />
           </div>
           <div class="ctaCart">
             <a class="submitButton" href="/index/successPage.html">

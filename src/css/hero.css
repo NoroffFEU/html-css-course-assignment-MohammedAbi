@@ -60,8 +60,8 @@
   border: none;
   margin-right: 21px;
 }
-.container .heroContainer .hero .cta button .shopButton a,
-.container .heroContainer .hero .cta button .collectionButton a {
+.container .heroContainer .hero .cta .shopButton,
+.container .heroContainer .hero .cta .collectionButton {
   text-decoration: none;
 }
 
@@ -70,12 +70,12 @@
   height: 48px;
   border-radius: 6px;
   background: var(--text-color);
-  color: #000;
+  color: var(--main-color);
   text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 48px;
   border: none;
 }
 
@@ -113,7 +113,7 @@
   column-gap: 20px;
   align-items: center;
   justify-content: space-between;
-  margin: 0 20px 209px 20px;
+  margin: 0 20px 151px 20px;
 }
 
 .container .feedbackCustomers .feedbackItem {
@@ -183,7 +183,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; /* Change this line to center the content */
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
