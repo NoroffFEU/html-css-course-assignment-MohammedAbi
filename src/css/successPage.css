@@ -1,3 +1,6 @@
+/* 
+<!---------------------------------- Start success -----------------------------------------------> 
+*/
 .cartInfo {
   display: block;
   position: relative;
@@ -83,8 +86,9 @@
 }
 .ctaCart .submitButton {
   border-radius: 6px;
-  width: 293px;
+  width: 100%;
   height: 60px;
+  padding: 12px 20px;
   background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
@@ -95,7 +99,13 @@
   border: none;
   margin-bottom: 161px;
 }
+/* 
+<!---------------------------------- Start success -----------------------------------------------> 
+ */
 
+/* 
+<!---------------------------------- Start media query -----------------------------------------------> 
+ */
 /* Desktop container utility class: */
 /* xl */
 .container {
@@ -160,8 +170,7 @@
       margin-left: -10px;
     }
     .ctaCart .submitButton {
-      width: 80%;
-      margin: -60px auto;
+      margin-top: -60px auto;
     }
   }
 }
@@ -216,3 +225,6 @@
     max-width: 1536px;
   }
 }
+/* 
+<!---------------------------------- End media query -----------------------------------------------> 
+ */
