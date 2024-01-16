@@ -50,7 +50,6 @@
   font-weight: 900;
   line-height: 64px;
   margin-bottom: 66px;
-
 }
 .deliveryInputs {
   display: block;
@@ -119,12 +118,14 @@
   line-height: 34px;
   border: none;
 }
+.ctaCart .submitButton:hover {
+  background-color: #45a049;
+}
 /* 
 <!---------------------------------- Start delivery ----------------------------------------------->
  */
 
-
- /* 
+/* 
 <!---------------------------------- Start media query ----------------------------------------------->
  */
 /* Desktop container utility class: */
@@ -194,7 +195,6 @@
       display: block;
       margin: 0 auto;
     }
-    
   }
 }
 
@@ -258,6 +258,6 @@
     max-width: 1536px;
   }
 }
- /* 
+/* 
 <!---------------------------------- End media query ----------------------------------------------->
  */

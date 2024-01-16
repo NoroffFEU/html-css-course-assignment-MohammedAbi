@@ -84,11 +84,11 @@
   margin-top: 37px;
   margin-bottom: 113px;
 }
+
 .ctaCart .submitButton {
   border-radius: 6px;
-  width: 100%;
+  width: 293px;
   height: 60px;
-  padding: 12px 20px;
   background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
@@ -97,7 +97,9 @@
   font-weight: 700;
   line-height: 34px;
   border: none;
-  margin-bottom: 161px;
+}
+.ctaCart .submitButton:hover {
+  background-color: #45a049;
 }
 /* 
 <!---------------------------------- Start success -----------------------------------------------> 

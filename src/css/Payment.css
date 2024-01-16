@@ -131,8 +131,7 @@
   margin-bottom: 113px;
 }
 
-
-.ctaCart a .submitButton {
+.ctaCart .submitButton {
   border-radius: 6px;
   width: 293px;
   height: 60px;
@@ -145,11 +144,14 @@
   line-height: 34px;
   border: none;
 }
+.ctaCart .submitButton:hover {
+  background-color: #45a049;
+}
 /* 
 <!---------------------------------- End Payment ----------------------------------------------->
  */
 
- /* 
+/* 
 <!---------------------------------- Start mediaquery ----------------------------------------------->
  */
 /* Desktop container utility class: */

@@ -202,6 +202,8 @@
   line-height: 34px;
   border: none;
 }
+.submitButton:hover {
+  background-color: #45a049;}
 /* 
 <!---------------------------------- End cartInfo ----------------------------------------------->
  */
