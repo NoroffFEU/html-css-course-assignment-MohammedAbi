@@ -12,7 +12,6 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="/src/css/reset.css" />
     <link rel="stylesheet" href="/src/css/variables.css" />
     <link rel="stylesheet" href="/src/css/navigation.css" />
@@ -37,7 +36,7 @@
             alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
         /></a>
         <ul class="navbar">
-          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="/index/productPage.html">Men</a></li>
           <li><a href="/index/productPage.html">Women</a></li>
         </ul>
@@ -50,7 +49,7 @@
           <li>
             <i class="bx bx-md bx-x" onclick="hideSideBar()"></i>
           </li>
-          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="/index/productPage.html">Men</a></li>
           <li><a href="/index/productPage.html">Women</a></li>
           <li><a href="/index/aboutPage.html">About</a></li>
@@ -90,62 +89,43 @@
                 typography choices, and information on image dimensions.
               </p>
             </div>
-            <div class="header">
-              <div class="dropdown" data-dropdown>
-                <button class="link" data-dropdown-button>
-                  Size <i class="bx bx-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu dropdownContainer">
-                  <div>
-                    <div class="dropdownHeading">Size</div>
-                    <div class="dropdownLinks">
-                      <a href="#" class="link">S</a>
-                      <a href="#" class="link">M</a>
-                      <a href="#" class="link">L</a>
-                      <a href="#" class="link">XL</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown" data-dropdown>
-                <button class="link" data-dropdown-button>
-                  Color <i class="bx bx-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu dropdownContainer">
-                  <div>
-                    <div class="dropdownHeading">Color</div>
-                    <div class="dropdownLinks">
-                      <a href="#" class="link">Black</a>
-                      <a href="#" class="link">Blue</a>
-                      <a href="#" class="link">Yellow</a>
-                      <a href="#" class="link">White</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown" data-dropdown>
-                <button class="link" data-dropdown-button>
-                  Qnty <i class="bx bx-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu dropdownContainer">
-                  <div>
-                    <div class="dropdownHeading">Qnty</div>
-                    <div class="dropdownLinks">
-                      <a href="#" class="link">1</a>
-                      <a href="#" class="link">2</a>
-                      <a href="#" class="link">4</a>
-                      <a href="#" class="link">7</a>
-                    </div>
-                  </div>
-                </div>
+
+            <div class="container">
+              <div class="dropdownContainer">
+                <h3>Make Your Selection:</h3>
+                <form action="/action_page.php">
+                  <label for="size">Size</label>
+                  <select name="size" id="size">
+                    <option value="">Size</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                  </select>
+
+                  <label for="color">Color</label>
+                  <select name="color" id="color">
+                    <option value="">Color</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                  </select>
+
+                  <label for="qnty">Qnty</label>
+                  <select name="qnty" id="qnty">
+                    <option value="">Qnty</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="7">7</option>
+                  </select>
+                </form>
               </div>
             </div>
-              <button class="addToCart" id="addToCart">Add to Cart</button>
-            <div class="cart">
-              <a href="/index/cartInfo.html"
-                ><i class="bx bx-shopping-bag"></i
-              ></a>
-            </div>
+            <button class="addToCart" id="addToCart">
+              Add to Cart <i class="bx bx-shopping-bag"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -221,7 +201,6 @@
       </section>
     </div>
     <script src="/java/nav.js"></script>
-    <script src="/java/productSpecificDropdown.js"></script>
     <script src="/java/productSpecificPage.js"></script>
   </body>
 </html>

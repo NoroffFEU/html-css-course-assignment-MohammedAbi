@@ -53,7 +53,7 @@
 
 .container .shop .box h5 {
   color: var(--main-color);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
@@ -92,7 +92,7 @@
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 45px;
-  text-align: center
+  text-align: center;
 }
 
 .container .shop .collectionItems .box .header {
@@ -105,83 +105,40 @@
   gap: 1rem;
 }
 
-.header .dropdown {
-  position: relative;
-}
-
-.header .dropdown button {
-  width: 100%;
-  border: 1px solid #dbdee7;
-  padding: 20px 40px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.header .dropdown button i {
-  margin-left: 25px;
-}
-
-.dropdown .link {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: var(--main-color);
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  padding: 0.25rem;
-}
-
-.dropdownContainer {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 0.25rem);
-  background-color: white;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdownContainer {
+.container h3 {
   display: inline-block;
-  width: 100%;
+  color: var(--main-color);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 1px;
+  margin: 0 auto;
 }
 
-.dropdownContainer a:hover {
-  color: var(--text-color);
-  background-color: #0045ff;
-  width: 100%;
-  text-align: left;
-}
-
-.dropdownHeading {
-  display: none;
-}
-
-.dropdownLinks {
+form {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  align-items: flex-start;
-  width: 100%;
-}
-.dropdownLinks.link {
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
-.dropdown.active > .link,
-.link:hover {
-  color: black;
+select {
+  outline: none;
+  background-color: var(--text-color);
+  border: 1px solid #dbdee7;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 14px 44px;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.dropdown.active > .link + .dropdownContainer {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+select:placeholder-shown + label {
+  display: block;
 }
 
 .addToCart {
@@ -197,15 +154,21 @@
   line-height: 34px;
   border: none;
   margin-bottom: 2rem;
+  margin-top: 8rem;
+}
+
+.addToCart i {
+  margin-left: 20px;
 }
 .addToCart:hover {
-  background-color: #45a049;}
+  background-color: #45a049;
+}
 /*
     <!---------------------------------- End product specific ----------------------------------------------->
 */
 
 /*
-    <!---------------------------------- Start mediaquery ----------------------------------------------->
+    <!---------------------------------- Start media query ----------------------------------------------->
 */
 /* Desktop container utility class: */
 .container {
@@ -251,6 +214,19 @@
   .container {
     max-width: 475px;
   }
+  select {
+    font-size: 14px;
+    padding: 12px 16px;
+    margin-bottom: 0;
+    width: auto;
+    margin-right: 10px;
+  }
+  label {
+    display: none;
+  }
+  .container h3 {
+    font-size: 24px;
+  }
 }
 
 /* xs */
@@ -261,6 +237,7 @@
       font-size: 36px;
       padding: 80px 0 50px;
     }
+
     .box h4 {
       color: var(--main-color);
       font-size: 25px;
@@ -284,73 +261,8 @@
       width: 40%;
       margin: 0 auto;
     }
-    .dropdown-links {
-      gap: 0.25rem;
-      width: 50%;
-    }
-    .dropdown button {
-      width: 100%;
-      border: 1px solid #dbdee7;
-      padding: 20px 20px;
-      border-radius: 6px;
-      text-align: center;
-    }
     .addToCart {
       width: 100%;
     }
   }
 }
-
-/* Mobile container utility class: */
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-/*
-    <!---------------------------------- End mediaquery ----------------------------------------------->
-*/
