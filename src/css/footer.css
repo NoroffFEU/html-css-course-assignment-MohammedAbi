@@ -13,11 +13,21 @@
   padding: 100px 40px 40px 40px;
 }
 
-.leftside {
-  display: block;
+.leftSide {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
   align-items: center;
   justify-content: center;
-  padding-left: 150px;
+}
+
+.leftSide img {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 69, 255, 0.1);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  padding: 2px;
 }
 
 .mainFooter p {
@@ -29,15 +39,6 @@
 }
 .mainFooter a {
   text-decoration: none;
-}
-
-.leftSide img {
-  width: 46px;
-  height: 46px;
-  background-color: #0045ff;
-  opacity: 0.75;
-  border-radius: 50%;
-  margin-bottom: 55px;
 }
 
 .middleSide span {
@@ -122,6 +123,12 @@
   .container {
     max-width: 475px;
     .logoFooter {
+      display: none;
+    }
+    .leftSide {
+      display: none;
+    }
+    mainfooter p {
       display: none;
     }
   }

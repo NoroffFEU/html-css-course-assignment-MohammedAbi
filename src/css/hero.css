@@ -243,6 +243,15 @@
     .collectionButton {
       display: none;
     }
+    .heroContainer .hero h1 {
+      color: var(--text-color);
+      text-align: center;
+      font-size: 58px;
+      font-style: italic;
+      font-weight: 900;
+      line-height: 64px;
+      margin-top: 150px;
+    }
   }
 }
 

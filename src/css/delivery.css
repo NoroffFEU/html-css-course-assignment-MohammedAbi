@@ -98,7 +98,7 @@
   font-weight: 400;
   line-height: 32px;
 }
-
+.deliveryInputs .ctaCart p a,
 .deliveryInputs .ctaCart p a i {
   color: var(--main-color);
   margin-right: 10px;
@@ -165,14 +165,11 @@
     }
     .cartstatusIndicator:nth-child(2) {
       border-radius: 6px 6px 6px 6px;
-      margin: auto;
+      margin: o auto;
       min-width: 200px;
     }
-    .cartStatus {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 100px;
+    .cartInfo .cartStatus {
+      padding: 75px;
     }
   }
 }
@@ -202,9 +199,6 @@
 @media (max-width: 475px) {
   .container {
     width: 100%;
-    .cartstatusIndicator:nth-child(2) {
-      margin-left: -10px;
-    }
   }
 }
 

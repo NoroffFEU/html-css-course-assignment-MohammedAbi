@@ -252,11 +252,8 @@
       min-width: 200px;
       margin: auto;
     }
-    .cartStatus {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 100px;
+    .cartInfo .cartStatus {
+      padding: 75px;
     }
 
     .tableContainer table td h3 {
@@ -311,11 +308,16 @@
 
     .submitButton {
       margin: 0 5px;
-      width: 50%;
-      font-size: 12px;
+      width: 100%;
+      font-size: 16px;
     }
     .ctaCart p a {
-      font-size: 12px;
+      font-size: 16px;
+      padding-bottom: 20px;
+    }
+    .ctaCart {
+      display: inline-block;
+      padding: 20px;
     }
   }
 }

@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const linkPath = link.getAttribute("href");
 
     if (currentPage === "/" && linkPath === "/index.html") {
-      console.log("current page is home");
       link.classList.add("active");
     } else if (currentPage !== "/" && linkPath === currentPage) {
       console.log("current page is not home");
