@@ -60,13 +60,13 @@
 .socialIconsContainer {
   display: inline-block;
   background-color: transparent;
-  width: 300px;
+  width: 250px;
 }
 
 .socialIconsContainer i {
   margin-right: 16px;
   color: var(--bg-color);
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .CopyRight {
