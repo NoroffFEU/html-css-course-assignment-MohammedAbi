@@ -1,3 +1,5 @@
+import { showLoader, hideLoader } from "./ui.js";
+
 // Function to retrieve all products
 export const getAllProducts = async (url) => {
   try {
@@ -28,9 +30,6 @@ export const getAllProducts = async (url) => {
   }
 };
 
-// Call the getAllProducts function with the specified URL
-getAllProducts("https://v2.api.noroff.dev/rainy-days/");
-
 // Function to dynamically update product information
 export const updateProductBoxes = (products) => {
   const productContainer = document.getElementById("productContainer");
@@ -59,6 +58,4 @@ export const updateProductBoxes = (products) => {
     // Append the product box to the container
     productContainer.appendChild(productBox);
   });
-  // Hide loader after updating the UI
-  hideLoader();
 };

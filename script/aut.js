@@ -25,10 +25,3 @@ export const loginUser = async (url, email, password) => {
     console.log("Error:", error.message);
   }
 };
-
-// Call the loginUser function with the specified URL, email, and password
-loginUser(
-  "https://v2.api.noroff.dev/auth/login",
-  "mohammed.abi@stud.noroff.no",
-  "Skuraane2024"
-);
