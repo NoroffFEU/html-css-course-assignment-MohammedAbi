@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentPage === "/" && linkPath === "/index.html") {
       link.classList.add("active");
     } else if (currentPage !== "/" && linkPath === currentPage) {
-      console.log("current page is not home");
       link.classList.add("active");
     }
   });
