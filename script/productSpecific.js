@@ -119,6 +119,11 @@ const updateProductDetails = async (productId) => {
     console.error("Error updating product details:", error.message);
   }
 };
+// Function to handle add to cart button click
+const handleAddToCart = () => {
+  // Add your logic here to handle adding the product to the cart
+};
+
 
 // Extract product ID from the query string
 const urlParams = new URLSearchParams(window.location.search);

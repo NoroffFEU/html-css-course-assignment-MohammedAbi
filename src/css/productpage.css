@@ -73,6 +73,42 @@
 .shop .collectionItems .box:hover {
   transform: translateY(-5px);
 }
+.gender-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  /* background-color: var(--bg-color); */
+}
+
+.gender-filter label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2rem;
+  color: black;
+}
+
+.gender-filter input[type="radio"] {
+  width: 1rem; /* Adjust width */
+  height: 1rem; /* Adjust height */
+  margin-right: .5rem;
+}
+.gender-filter {
+  display: inline-block;
+  margin: 0 auto;
+  box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+  padding: .5rem;
+  border-radius: .2rem;
+
+}
+.gender-filter h4 {
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
 
 
 /*

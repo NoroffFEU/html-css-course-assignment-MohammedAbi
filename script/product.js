@@ -13,7 +13,6 @@ const hideLoader = () => {
     loaderElement.style.display = "none";
   }
 };
-// -----------------------------------------------------------------
 
 // Function to login a user
 const loginUser = async (url, email, password) => {
@@ -29,6 +28,8 @@ const loginUser = async (url, email, password) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // Add any additional headers here
+        Authorization: "Bearer your_auth_token", // Example of adding an authentication token
       },
       body: JSON.stringify(requestBody),
     });
@@ -42,6 +43,9 @@ const loginUser = async (url, email, password) => {
     }
   } catch (error) {
     console.log("Error:", error.message);
+  } finally {
+    // Hide loader regardless of success or failure
+    hideLoader();
   }
 };
 
@@ -51,8 +55,6 @@ loginUser(
   "mohammed.abi@stud.noroff.no",
   "Skuraane2024"
 );
-
-// -----------------------------------------------------------------
 
 // Function to retrieve all products
 const getAllProducts = async (url) => {
@@ -68,6 +70,8 @@ const getAllProducts = async (url) => {
       if (products.length > 0) {
         console.log("All Product Data:", products);
         updateProductBoxes(products);
+      } else {
+        throw new Error("No products found.");
       }
     } else {
       throw new Error(
@@ -81,21 +85,36 @@ const getAllProducts = async (url) => {
     hideLoader();
   }
 };
-getAllProducts("https://v2.api.noroff.dev/rainy-days");
 
-// -----------------------------------------------------------------
-
-// // Function to dynamically update product information
+// Function to dynamically update product information
 const updateProductBoxes = (products) => {
   const productContainer = document.getElementById("productContainer");
 
   // Clear existing content in the container
   productContainer.innerHTML = "";
 
+  // Create gender filter container with styling
+  const genderFilterContainer = document.createElement("div");
+  genderFilterContainer.classList.add("gender-filter-container");
+  genderFilterContainer.innerHTML = `
+    <div class="gender-filter">
+    <h4>Select Gender:</h4>
+      <label><input type="radio" name="gender" value="male" onchange="filterProducts(this.value)"> Male</label>
+      <label><input type="radio" name="gender" value="female" onchange="filterProducts(this.value)"> Female</label>
+    </div>
+  `;
+
+  // Insert the gender filter before the product container
+  productContainer.parentNode.insertBefore(
+    genderFilterContainer,
+    productContainer
+  );
+
   // Iterate through each product and create a product box
   products.forEach((product) => {
     const productBox = document.createElement("div");
     productBox.classList.add("box");
+    productBox.dataset.gender = product.gender.toLowerCase(); // Set data-gender attribute
 
     productBox.innerHTML = `
             <a href="/index/productSpecificPage.html?id=${product.id}">
@@ -115,4 +134,18 @@ const updateProductBoxes = (products) => {
   });
 };
 
+// Function to filter products by gender
+const filterProducts = (gender) => {
+  const productContainer = document.getElementById("productContainer");
+  const productBoxes = productContainer.getElementsByClassName("box");
 
+  // Iterate through product boxes and hide/show based on gender
+  Array.from(productBoxes).forEach((box) => {
+    const productGender = box.dataset.gender;
+    const showProduct = gender === productGender;
+    box.style.display = showProduct ? "block" : "none";
+  });
+};
+
+// Fetch all products when the page loads
+getAllProducts("https://v2.api.noroff.dev/rainy-days");

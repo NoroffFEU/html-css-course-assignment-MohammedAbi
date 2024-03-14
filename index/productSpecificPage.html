@@ -26,7 +26,6 @@
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
   </head>
-
   <body>
     <div class="container">
       <header>
@@ -76,6 +75,9 @@
               src="/assets/images/RainyDays_Jacket1.jpg"
               alt="A red and black rain jacket for both men and women on a white background."
             />
+            <!-- Include an element to hold the product ID -->
+            <div id="productId" style="display: none">123456</div>
+
             <h4>StormGuard Pro</h4>
             <h5>$142</h5>
             <div class="productDescription">
@@ -124,9 +126,14 @@
                 </form>
               </div>
             </div>
-            <button class="addToCart" id="addToCart">
-              Add to Cart <i class="bx bx-shopping-bag"></i>
-            </button>
+            <a href="/index/cartInfo.html">
+              <button class="addToCart" id="addToCart">
+                Add to Cart <i class="bx bx-shopping-bag"></i>
+              </button>
+              <button class="addToCart" id="addToCartButton">
+                Add to Cart <i class="bx bx-shopping-bag"></i>
+              </button>
+            </a>
           </div>
         </div>
       </section>
