@@ -1,5 +1,3 @@
-
-
 // Function to delete an item from the cart and update local storage
 const deleteItemFromCart = (itemId) => {
   try {
@@ -10,18 +8,18 @@ const deleteItemFromCart = (itemId) => {
     const itemIndex = cartContent.findIndex((item) => item.id === itemId);
 
     if (itemIndex !== -1) {
-      // If item quantity is greater than 1, decrease the quantity by one
+      // Decrease the quantity by one
       if (cartContent[itemIndex].quantity > 1) {
         cartContent[itemIndex].quantity--;
       } else {
-        // If item quantity is 1 or less, remove the item from the cart
+        // If item quantity is 1, remove the item from the cart
         cartContent.splice(itemIndex, 1);
       }
 
       // Save the updated cart content back to localStorage
       localStorage.setItem("cartContent", JSON.stringify(cartContent));
 
-      // Log the item removed from the cart
+      // Log the item deleted from the cart
       console.log("Item deleted from cart with ID:", itemId);
 
       // Update the display of cart content after successful deletion
@@ -33,9 +31,6 @@ const deleteItemFromCart = (itemId) => {
     } else {
       console.log("Item not found in the cart.");
     }
-
-    // Show a success message (optional)
-    // alert("Item deleted from cart successfully!");
   } catch (error) {
     console.error("Error deleting item from cart:", error.message);
   }
@@ -55,20 +50,12 @@ const updateCartFromLocalStorage = () => {
     // Get the table body element
     const tbody = document.querySelector("#cartContainer table tbody");
 
-    // Get existing rows
-    const existingRows = tbody.querySelectorAll("tr");
+    // Clear the existing content
+    tbody.innerHTML = "";
 
     // Iterate over each item in the cart and update/add the corresponding row
     cartContent.forEach((item, index) => {
-      let row;
-      // Check if there's an existing row for this item
-      if (existingRows[index]) {
-        row = existingRows[index];
-      } else {
-        // If no existing row, create a new one
-        row = document.createElement("tr");
-        tbody.appendChild(row);
-      }
+      const row = document.createElement("tr");
 
       // Update the content of the row
       row.innerHTML = `
@@ -87,86 +74,37 @@ const updateCartFromLocalStorage = () => {
           <input
             type="number"
             value="${item.quantity}"
-            id="qnty${index + 1}"
             aria-label="Quantity"
+            disabled
           />
         </td>
         <td class="productPrice">$${item.price.toFixed(2)}</td>
         <td>
-          <div class="deleteItem" data-id="${item.id}">x</div>
+          <button class="deleteItem" data-id="${item.id}">Delete</button>
         </td>
       `;
-    });
 
-    // Remove any extra rows if cart content is less than existing rows
-    if (existingRows.length > cartContent.length) {
-      for (let i = cartContent.length; i < existingRows.length; i++) {
-        tbody.removeChild(existingRows[i]);
-      }
-    }
-
-    // Attach event listeners to delete buttons
-    const deleteButtons = document.querySelectorAll(".deleteItem");
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        const itemId = event.target.dataset.id;
-        deleteItemFromCart(itemId);
+      // Attach event listener to delete button
+      const deleteButton = row.querySelector(".deleteItem");
+      deleteButton.addEventListener("click", () => {
+        deleteItemFromCart(item.id);
       });
+
+      // Append the row to the tbody
+      tbody.appendChild(row);
     });
   } catch (error) {
     console.error("Error updating cart from localStorage:", error.message);
   }
 };
 
-
 // Function to display the cart content
 const displayCartContent = () => {
-  const cartContentElement = document.getElementById("cartContainer");
-
-  // Check if the cart content element exists
-  if (!cartContentElement) {
-    console.error("Cart content element not found.");
-    return;
-  }
-
-  const cartContent = JSON.parse(localStorage.getItem("cartContent"));
-
-  // Clear the previous content
-  cartContentElement.innerHTML = "";
-
-  if (!cartContent || cartContent.length === 0) {
-    cartContentElement.textContent = "Cart is empty.";
-    return;
-  }
-
-  cartContent.forEach((item) => {
-    const itemElement = document.createElement("div");
-    itemElement.classList.add("cart-item");
-    itemElement.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div class="item-details">
-        <h4>${item.name}</h4>
-        <p>${item.description}</p>
-        <p>Price: $${item.price.toFixed(2)}</p>
-        <p>Size: ${item.size}</p>
-        <p>Color: ${item.color}</p>
-        <p>Quantity: ${item.quantity}</p>
-        <button class="deleteItem" data-id="${item.id}">Delete</button>
-      </div>
-    `;
-    cartContentElement.appendChild(itemElement);
-  });
+  updateCartFromLocalStorage();
 };
 
 // Attach event listener to the parent container of delete buttons when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("deleteItem")) {
-      const itemId = event.target.dataset.id;
-      deleteItemFromCart(itemId);
-    }
-  });
-  
   // Call the function to update the cart table from localStorage when the page loads
-  updateCartFromLocalStorage();
+  displayCartContent();
 });
