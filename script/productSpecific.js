@@ -146,8 +146,8 @@
 //   productColor,
 //   productQuantity,
 //   productImage,
-//   productDescription, // Add product description parameter
-//   productBaseColor // Add product baseColor parameter
+//   productDescription,
+//   productBaseColor
 // ) => {
 //   try {
 //     // Create the cart item object
@@ -159,8 +159,8 @@
 //       color: productColor,
 //       quantity: productQuantity,
 //       image: productImage,
-//       description: productDescription, // Add product description to the cart item
-//       baseColor: productBaseColor // Add product baseColor to the cart item
+//       description: productDescription,
+//       baseColor: productBaseColor
 //     };
 
 //     // Get the cart from localStorage or initialize an empty cart if it doesn't exist
@@ -182,12 +182,12 @@
 //     // Save the updated cart content back to localStorage
 //     localStorage.setItem("cartContent", JSON.stringify(cartContent));
 
-//     // Log the item added to the cart
-//     console.log("Item added to cart:", cartItem);
-
 //     // Dispatch a custom event to notify cartInfo.js that the cart has been updated
 //     const cartUpdatedEvent = new CustomEvent("cartUpdated");
 //     window.dispatchEvent(cartUpdatedEvent);
+
+//     // Update the counter
+//     updateCartCounter(cartContent.length);
 
 //     // Show a success message
 //     alert("Product added to cart successfully!");
@@ -195,6 +195,15 @@
 //     console.error("Error adding item to cart:", error.message);
 //   }
 // };
+
+// // Function to update the cart counter
+// const updateCartCounter = (count) => {
+//   const counterSpan = document.querySelector('.icons .counter');
+//   if (counterSpan) {
+//     counterSpan.textContent = count;
+//   }
+// };
+
 
 
 // // Function to handle adding the selected product to the cart
@@ -251,9 +260,7 @@
 //   initProductSpecificPage();
 //   handleAddToCartButtonState(); // Check initial state of Add to Cart button
 // });
-
-
-// -------------test
+// --------test
 
 
 // Utility function to show loading spinner or any UI indicator
@@ -395,6 +402,22 @@ document.getElementById("size").addEventListener("change", handleAddToCartButton
 document.getElementById("color").addEventListener("change", handleAddToCartButtonState);
 document.getElementById("qnty").addEventListener("input", handleAddToCartButtonState);
 
+// Function to update the cart counter
+const updateCartCounter = (count) => {
+  const counterSpan = document.querySelector('.icons .counter');
+  if (counterSpan) {
+    counterSpan.textContent = count;
+  }
+};
+
+// Function to update the total price in cart
+const updateTotalPrice = (price) => {
+  const totalPriceElement = document.getElementById("totalPrice");
+  if (totalPriceElement) {
+    totalPriceElement.textContent = `$${price.toFixed(2)}`;
+  }
+};
+
 // Function to add an item to the cart and update local storage
 const addItemToCartAndUpdateStorage = (
   productId,
@@ -404,8 +427,8 @@ const addItemToCartAndUpdateStorage = (
   productColor,
   productQuantity,
   productImage,
-  productDescription, // Add product description parameter
-  productBaseColor // Add product baseColor parameter
+  productDescription,
+  productBaseColor
 ) => {
   try {
     // Create the cart item object
@@ -417,8 +440,8 @@ const addItemToCartAndUpdateStorage = (
       color: productColor,
       quantity: productQuantity,
       image: productImage,
-      description: productDescription, // Add product description to the cart item
-      baseColor: productBaseColor // Add product baseColor to the cart item
+      description: productDescription,
+      baseColor: productBaseColor
     };
 
     // Get the cart from localStorage or initialize an empty cart if it doesn't exist
@@ -440,12 +463,18 @@ const addItemToCartAndUpdateStorage = (
     // Save the updated cart content back to localStorage
     localStorage.setItem("cartContent", JSON.stringify(cartContent));
 
-    // Log the item added to the cart
-    console.log("Item added to cart:", cartItem);
-
     // Dispatch a custom event to notify cartInfo.js that the cart has been updated
     const cartUpdatedEvent = new CustomEvent("cartUpdated");
     window.dispatchEvent(cartUpdatedEvent);
+
+    // Update the counter
+    updateCartCounter(cartContent.length);
+
+    // Calculate total price
+    const totalPrice = cartContent.reduce((total, item) => total + (item.price * item.quantity), 0);
+    
+    // Update total price
+    updateTotalPrice(totalPrice);
 
     // Show a success message
     alert("Product added to cart successfully!");
@@ -453,7 +482,6 @@ const addItemToCartAndUpdateStorage = (
     console.error("Error adding item to cart:", error.message);
   }
 };
-
 
 // Function to handle adding the selected product to the cart
 const handleAddToCart = () => {
