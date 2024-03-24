@@ -171,3 +171,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Display the products in the cart
   displayProductsInCart(productsInCart);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener to the submit button
+  const submitButton = document.getElementById("submitButton");
+  if (submitButton) {
+    submitButton.addEventListener("click", function () {
+      // Redirect the user to the specified location
+      window.location.href = "/index/delivery.html";
+    });
+  } else {
+    console.error("Submit button not found.");
+  }
+
+  // Retrieve the products from local storage
+  const productsInCart =
+    JSON.parse(localStorage.getItem("productsInCart")) || [];
+
+  // Display the products in the cart
+  displayProductsInCart(productsInCart);
+});
