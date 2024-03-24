@@ -680,7 +680,7 @@ if (addToCartButton) {
 document.addEventListener("DOMContentLoaded", () => {
   initProductSpecificPage();
   handleAddToCartButtonState(); // Check initial state of Add to Cart button
-=======
+
 }
 
 // Function to display product details on the page
