@@ -858,5 +858,4 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("No product ID found in URL parameters.");
   }
->>>>>>> Stashed changes
 });
