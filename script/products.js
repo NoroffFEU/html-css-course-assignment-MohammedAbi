@@ -4,8 +4,6 @@ let products = [];
 let clickedProduct = null;
 
 async function renderProducts() {
-  // // Clear local storage before fetching products
-  // localStorage.clear();
   try {
     const token = await loginUser(
       "https://v2.api.noroff.dev/auth/login",
@@ -27,155 +25,138 @@ async function renderProducts() {
 
     const { data } = await response.json();
     products = data;
-    renderProductsInHTML();
+    renderGenderFilter(); // Call the gender filter rendering function here
+    renderFilteredProducts(products); // Render all products initially
   } catch (error) {
     console.error("Error rendering products:", error);
   }
 }
 
-function renderProductsInHTML() {
+function renderGenderFilter() {
   try {
     const productContainer = document.getElementById("productContainer");
     if (!productContainer) {
       throw new Error("Product container not found in HTML.");
     }
 
-    productContainer.innerHTML = "";
-
-    if (!Array.isArray(products)) {
-      throw new Error("Products is not an array:", products);
+    const filterContainer = document.getElementById("filterContainer");
+    if (filterContainer) {
+      // If filter container already exists, remove it before re-rendering
+      filterContainer.remove();
     }
 
-    products.forEach((product) => {
-      const { id, title, description, image, sizes, price, gender } = product;
+    const newFilterContainer = document.createElement("div");
+    newFilterContainer.id = "filterContainer";
 
-      const box = document.createElement("div");
-      box.classList.add("box");
+    // Add heading for gender
+    const genderHeading = document.createElement("h4");
+    genderHeading.textContent = "Select gender";
+    newFilterContainer.appendChild(genderHeading);
 
-      box.dataset.productId = id;
+    const genderLabels = ["All", "Female", "Male"];
 
-      const productLink = document.createElement("a");
-      productLink.href = `/index/productSpecificPage.html?id=${id}`;
+    genderLabels.forEach((label) => {
+      const radioInput = document.createElement("input");
+      radioInput.type = "radio";
+      radioInput.name = "gender";
+      radioInput.value = label.toLowerCase();
+      radioInput.id = `${label.toLowerCase()}Radio`;
+      radioInput.addEventListener("change", filterProducts); // Add event listener
 
-      const productImage = document.createElement("img");
-      productImage.src = image.url;
-      productImage.alt = image.alt || "Product Image";
+      const radioLabel = document.createElement("label");
+      radioLabel.textContent = label;
+      radioLabel.htmlFor = `${label.toLowerCase()}Radio`;
 
-      const productName = document.createElement("h4");
-      productName.textContent = title;
+      if (label === "All") {
+        // Make "All" option checked by default
+        radioInput.checked = true;
+      }
 
-      const productDescription = document.createElement("p");
-      productDescription.textContent = description;
-
-      const productPrice = document.createElement("h5");
-      productPrice.textContent = `$${price}`;
-
-      const productGender = document.createElement("p");
-      productGender.textContent = gender;
-
-      const productSizes = document.createElement("p");
-      productSizes.textContent = "Sizes: " + sizes.join(", ");
-
-      const cartIcon = document.createElement("div");
-      cartIcon.classList.add("cart");
-      const shoppingBagIcon = document.createElement("i");
-      shoppingBagIcon.classList.add("bx", "bx-shopping-bag");
-      cartIcon.appendChild(shoppingBagIcon);
-
-      productLink.appendChild(productImage);
-      box.appendChild(productLink);
-      box.appendChild(productName);
-      box.appendChild(productDescription);
-      box.appendChild(productPrice);
-      box.appendChild(productGender);
-      box.appendChild(productSizes);
-      box.appendChild(cartIcon);
-
-      productContainer.appendChild(box);
+      newFilterContainer.appendChild(radioInput);
+      newFilterContainer.appendChild(radioLabel);
     });
 
-    const productBoxes = document.querySelectorAll(".box");
-    productBoxes.forEach((box) => {
-      box.addEventListener("click", handleProductClick);
-    });
+    productContainer.parentNode.insertBefore(
+      newFilterContainer,
+      productContainer
+    );
   } catch (error) {
-    console.error("Error rendering products in HTML:", error);
+    console.error("Error rendering gender filter:", error);
   }
 }
 
-function handleProductClick(event) {
-  try {
-    const productBox = event.currentTarget;
-    const productId = productBox.dataset.productId;
-    if (!productId) {
-      throw new Error("Product ID not found in the clicked product box.");
-    }
+function filterProducts(event) {
+  const selectedGender = event.target.value;
+  const filteredProducts = [];
 
-    const productTitle = productBox.querySelector("h4").textContent;
-    const productDescription = productBox.querySelector("p").textContent;
-    const productGender =
-      productBox.querySelector("p:nth-child(5)").textContent;
-    const productSizes = productBox
-      .querySelector("p:nth-child(6)")
-      .textContent.replace("Sizes: ", "")
-      .split(", ");
-
-    const productData = products.find((product) => product.id === productId);
-    if (!productData) {
-      throw new Error("Product data not found for productId:", productId);
-    }
-
-    const { baseColor, price, image } = productData;
-
-    const productPrice = parseFloat(price);
-
-    const productImageUrl = image.url;
-    const productImageAlt = image.alt;
-
-    const product = {
-      id: productId,
-      title: productTitle,
-      description: productDescription,
-      gender: productGender,
-      sizes: productSizes,
-      baseColor: baseColor,
-      price: productPrice,
-      image: {
-        url: productImageUrl,
-        alt: productImageAlt,
-      },
-      qnty: 1,
-    };
-
-    clickedProduct = product;
-    console.log("Clicked product:", clickedProduct);
-    window.location.href = `/index/productSpecificPage.html?id=${productId}`;
-  } catch (error) {
-    console.error("Error handling product click:", error);
-  }
-}
-
-// Function to update the cart count based on the items in the cart
-function updateCartCount() {
-  // Retrieve the products from local storage
-  const productsInCart =
-    JSON.parse(localStorage.getItem("productsInCart")) || [];
-
-  // Calculate the total quantity of items in the cart
-  const totalQuantity = productsInCart.reduce(
-    (total, product) => total + parseInt(product.quantity),
-    0
-  );
-
-  // Update the cart count element in the HTML
-  const cartCountElement = document.querySelector(".counter");
-  if (cartCountElement) {
-    cartCountElement.textContent = totalQuantity.toString();
+  if (selectedGender === "all") {
+    // If "All" is selected, add all products to the filtered list
+    filteredProducts.push(...products);
   } else {
-    console.error("Cart count element not found.");
+    // If a specific gender is selected, filter products based on the gender
+    filteredProducts.push(...products.filter(product => product.gender.toLowerCase() === selectedGender));
   }
+
+  // Render the filtered products
+  renderFilteredProducts(filteredProducts);
 }
-// Call updateCartCount function when the page loads
-document.addEventListener("DOMContentLoaded", updateCartCount);
+
+function renderFilteredProducts(filteredProducts) {
+  const productContainer = document.getElementById("productContainer");
+  productContainer.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    // Render product as before
+    const { id, title, description, image, sizes, price, gender } = product;
+
+    const box = document.createElement("div");
+    box.classList.add("box");
+
+    box.dataset.productId = id;
+
+    const productLink = document.createElement("a");
+    productLink.href = `/index/productSpecificPage.html?id=${id}`;
+
+    const productImage = document.createElement("img");
+    productImage.src = image.url;
+    productImage.alt = image.alt || "Product Image";
+
+    const productName = document.createElement("h4");
+    productName.textContent = title;
+
+    const productDescription = document.createElement("p");
+    productDescription.textContent = description;
+
+    const productPrice = document.createElement("h5");
+    productPrice.textContent = `$${price}`;
+
+    const productGender = document.createElement("p");
+    productGender.textContent = gender;
+
+    const productSizes = document.createElement("p");
+    productSizes.textContent = "Sizes: " + sizes.join(", ");
+
+    const cartIcon = document.createElement("div");
+    cartIcon.classList.add("cart");
+    const shoppingBagIcon = document.createElement("i");
+    shoppingBagIcon.classList.add("bx", "bx-shopping-bag");
+    cartIcon.appendChild(shoppingBagIcon);
+
+    productLink.appendChild(productImage);
+    box.appendChild(productLink);
+    box.appendChild(productName);
+    box.appendChild(productDescription);
+    box.appendChild(productPrice);
+    box.appendChild(productGender);
+    box.appendChild(productSizes);
+    box.appendChild(cartIcon);
+
+    productContainer.appendChild(box);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+});
 
 export { products, renderProducts, clickedProduct };
