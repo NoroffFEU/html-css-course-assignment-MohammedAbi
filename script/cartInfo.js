@@ -96,9 +96,6 @@ function displayProductsInCart(products) {
     }" aria-label="Quantity" />
       </td>
       <td class="productPrice">${unitPrice}</td> <!-- Display unit price -->
-      <td class="totalItemPrice">${itemTotalPrice.toFixed(
-        2
-      )}</td> <!-- Display total item price -->
       <td>
         <div class="deleteItem" onclick="removeCartItem(${index})">x</div>
       </td>

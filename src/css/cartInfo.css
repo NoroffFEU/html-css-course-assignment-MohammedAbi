@@ -215,6 +215,9 @@
 }
 
 .deleteItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.3rem 1.5rem;
   border-radius: 0.3rem;
   border: none;
@@ -222,6 +225,7 @@
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
 
 .deleteItem:hover {
   padding: 0.3rem 1.5rem;
