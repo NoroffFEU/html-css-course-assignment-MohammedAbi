@@ -75,9 +75,6 @@
               src="/assets/images/RainyDays_Jacket1.jpg"
               alt="A red and black rain jacket for both men and women on a white background."
             />
-            <!-- Include an element to hold the product ID -->
-            <div id="productId" style="display: none">123456</div>
-
             <h4>StormGuard Pro</h4>
             <h5>$142</h5>
             <div class="productDescription">
@@ -115,8 +112,9 @@
                     <option value="">White</option>
                   </select>
 
-                  <label for="qnty">Qnty</label>
+                  <label for="qnty">Quantity</label>
                   <select name="qnty" id="qnty">
+                    <!-- Corrected to use id attribute -->
                     <option value="">Qnty</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -126,10 +124,15 @@
                 </form>
               </div>
             </div>
-            <a href="/index/cartInfo.html">
+            <!-- <a href="/index/cartInfo.html">
               <button class="addToCart" id="addToCartButton">
                 Add to Cart <i class="bx bx-shopping-bag"></i>
               </button>
+              </button>
+            </a> -->
+            <a href="#" id="addToCartLink">
+              <button class="addToCart" id="addToCartButton">
+                Add to Cart <i class="bx bx-shopping-bag"></i>
               </button>
             </a>
           </div>
@@ -207,7 +210,8 @@
       </section>
     </div>
     <script src="/script/nav.js"></script>
+
+    <script type="module" src="../script/productSpecific.js"></script>
     <script src="/script/productSpecificPage.js"></script>
-    <script src="../script/productSpecific.js"></script>
   </body>
 </html>

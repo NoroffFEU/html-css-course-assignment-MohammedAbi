@@ -36,7 +36,8 @@
   border-radius: 0px 6px 6px 0px;
 }
 
-.cartInfo h1 {
+.cartInfo h1
+ {
   color: var(--main-color);
   text-align: center;
   font-size: 46px;
@@ -45,6 +46,14 @@
   line-height: 64px;
   margin-bottom: 66px;
 }
+.cartInfo h4 {
+  /* Add your styles here */
+  color: var(--main-color);
+  font-size: 36px;
+  text-align: center;
+  padding: 40px;
+}
+
 
 .tableContainer {
   width: 100%;

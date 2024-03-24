@@ -73,13 +73,13 @@
 .shop .collectionItems .box:hover {
   transform: translateY(-5px);
 }
-.gender-filter-container {
+/* .gender-filter-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
   padding: 1rem;
-  /* background-color: var(--bg-color); */
+  background-color: var(--bg-color);
 }
 
 .gender-filter label {
@@ -90,8 +90,8 @@
 }
 
 .gender-filter input[type="radio"] {
-  width: 1rem; /* Adjust width */
-  height: 1rem; /* Adjust height */
+  width: 1rem;
+  height: 1rem; 
   margin-right: .5rem;
 }
 .gender-filter {
@@ -106,7 +106,7 @@
   color: var(--main-color);
   text-align: center;
   margin-bottom: 1rem;
-}
+} */
 
 
 
