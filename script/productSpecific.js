@@ -19,8 +19,14 @@ async function fetchProductDetails(productId) {
 
       // Display the fetched product details
       displayProductDetails(product);
+      // Parse the response JSON
+      const product = await response.json();
+
+      // Display the fetched product details
+      displayProductDetails(product);
     } else {
       throw new Error(
+        "Failed to fetch product details with status: " + response.status
         "Failed to fetch product details with status: " + response.status
       );
     }

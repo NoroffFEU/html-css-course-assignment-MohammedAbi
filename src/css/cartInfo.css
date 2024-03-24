@@ -36,7 +36,8 @@
   border-radius: 0px 6px 6px 0px;
 }
 
-.cartInfo h1 {
+.cartInfo h1
+ {
   color: var(--main-color);
   text-align: center;
   font-size: 46px;
@@ -211,6 +212,34 @@
 }
 .submitButton:hover {
   background-color: #45a049;
+}
+
+.deleteItem {
+  padding: 0.3rem 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: .1rem solid var(--bg-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.deleteItem:hover {
+  padding: 0.3rem 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: .1rem solid var(--bg-color);
+  background-color: red;
+  color: var(--text-color);
+}
+
+.empty-cart-message {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 36px;
+  font-style: var(--font-style);
+  font-weight: 900;
+  line-height: 64px;
+  margin-bottom: 66px;
 }
 /* 
 <!---------------------------------- End cartInfo ----------------------------------------------->
