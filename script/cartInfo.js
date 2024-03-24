@@ -97,7 +97,7 @@ function displayProductsInCart(products) {
       </td>
       <td class="productPrice">${unitPrice}</td> <!-- Display unit price -->
       <td>
-        <div class="deleteItem" onclick="removeCartItem(${index})">x</div>
+        <div class="deleteItem" onclick="removeCartItem(${index})">Delete</div>
       </td>
     `;
     tbody.appendChild(tr);
