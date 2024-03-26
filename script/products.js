@@ -5,6 +5,10 @@ let clickedProduct = null;
 
 async function renderProducts() {
   try {
+    // Show loader while fetching products
+    const loader = document.getElementById("loader");
+    loader.style.display = "block";
+
     const token = await loginUser(
       "https://v2.api.noroff.dev/auth/login",
       "mohammed.abi@stud.noroff.no",
@@ -27,10 +31,17 @@ async function renderProducts() {
     products = data;
     renderGenderFilter(); // Call the gender filter rendering function here
     renderFilteredProducts(products); // Render all products initially
+
+    // Hide loader after products are rendered
+    loader.style.display = "none";
   } catch (error) {
     console.error("Error rendering products:", error);
+    // Hide loader in case of error
+    loader.style.display = "none";
   }
 }
+
+// Rest of the code remains the same...
 
 function renderGenderFilter() {
   try {
@@ -94,7 +105,11 @@ function filterProducts(event) {
     filteredProducts.push(...products);
   } else {
     // If a specific gender is selected, filter products based on the gender
-    filteredProducts.push(...products.filter(product => product.gender.toLowerCase() === selectedGender));
+    filteredProducts.push(
+      ...products.filter(
+        (product) => product.gender.toLowerCase() === selectedGender
+      )
+    );
   }
 
   // Render the filtered products
