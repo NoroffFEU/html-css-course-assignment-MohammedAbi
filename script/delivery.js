@@ -1,7 +1,3 @@
-document.getElementById("submitButton").onclick = function () {
-  location.href = "/index/delivery.html";
-};
-
 // Define an array of objects representing the delivery fields
 const deliveryFields = [
   { label: "First Name:", id: "firstName", placeholder: "First Name" },

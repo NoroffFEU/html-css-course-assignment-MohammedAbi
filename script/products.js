@@ -1,162 +1,171 @@
-import { loginUser } from "../script/user.js";
+// import { loginUser } from "../script/user.js";
+// import { updateCartCount } from "./updateCartCount.js";
+// import { renderFilteredProducts, filterProducts } from "./filter.js"; // Import filter functions
 
-let products = [];
-let clickedProduct = null;
 
-async function renderProducts() {
-  try {
-    const token = await loginUser(
-      "https://v2.api.noroff.dev/auth/login",
-      "mohammed.abi@stud.noroff.no",
-      "Skuraane2024"
-    );
+// let products = [];
+// let clickedProduct = null;
 
-    const response = await fetch("https://v2.api.noroff.dev/rainy-days", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+// async function renderProducts() {
+//   try {
+//     const token = await loginUser(
+//       "https://v2.api.noroff.dev/auth/login",
+//       "mohammed.abi@stud.noroff.no",
+//       "Skuraane2024"
+//     );
 
-    if (!response.ok) {
-      throw new Error(
-        "Failed to fetch products with status: " + response.status
-      );
-    }
+//     const response = await fetch("https://v2.api.noroff.dev/rainy-days", {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
 
-    const { data } = await response.json();
-    products = data;
-    renderGenderFilter(); // Call the gender filter rendering function here
-    renderFilteredProducts(products); // Render all products initially
-  } catch (error) {
-    console.error("Error rendering products:", error);
-  }
-}
+//     if (!response.ok) {
+//       throw new Error(
+//         "Failed to fetch products with status: " + response.status
+//       );
+//     }
 
-function renderGenderFilter() {
-  try {
-    const productContainer = document.getElementById("productContainer");
-    if (!productContainer) {
-      throw new Error("Product container not found in HTML.");
-    }
+//     const { data } = await response.json();
+//     products = data;
+//     renderGenderFilter(products); // Call the gender filter rendering function here
+//     renderFilteredProducts(products); // Render all products initially
+//   } catch (error) {
+//     console.error("Error rendering products:", error);
+//   }
+// }
 
-    const filterContainer = document.getElementById("filterContainer");
-    if (filterContainer) {
-      // If filter container already exists, remove it before re-rendering
-      filterContainer.remove();
-    }
+// function renderGenderFilter() {
+//   try {
+//     const productContainer = document.getElementById("productContainer");
+//     if (!productContainer) {
+//       throw new Error("Product container not found in HTML.");
+//     }
 
-    const newFilterContainer = document.createElement("div");
-    newFilterContainer.id = "filterContainer";
+//     const filterContainer = document.getElementById("filterContainer");
+//     if (filterContainer) {
+//       // If filter container already exists, remove it before re-rendering
+//       filterContainer.remove();
+//     }
 
-    // Add heading for gender
-    const genderHeading = document.createElement("h4");
-    genderHeading.textContent = "Select gender";
-    newFilterContainer.appendChild(genderHeading);
+//     const newFilterContainer = document.createElement("div");
+//     newFilterContainer.id = "filterContainer";
 
-    const genderLabels = ["All", "Female", "Male"];
+//     // Add heading for gender
+//     const genderHeading = document.createElement("h4");
+//     genderHeading.textContent = "Select gender";
+//     newFilterContainer.appendChild(genderHeading);
 
-    genderLabels.forEach((label) => {
-      const radioInput = document.createElement("input");
-      radioInput.type = "radio";
-      radioInput.name = "gender";
-      radioInput.value = label.toLowerCase();
-      radioInput.id = `${label.toLowerCase()}Radio`;
-      radioInput.addEventListener("change", filterProducts); // Add event listener
+//     const genderLabels = ["All", "Female", "Male"];
 
-      const radioLabel = document.createElement("label");
-      radioLabel.textContent = label;
-      radioLabel.htmlFor = `${label.toLowerCase()}Radio`;
+//     genderLabels.forEach((label) => {
+//       const radioInput = document.createElement("input");
+//       radioInput.type = "radio";
+//       radioInput.name = "gender";
+//       radioInput.value = label.toLowerCase();
+//       radioInput.id = `${label.toLowerCase()}Radio`;
+//       radioInput.addEventListener("change", filterProducts); // Add event listener
 
-      if (label === "All") {
-        // Make "All" option checked by default
-        radioInput.checked = true;
-      }
+//       const radioLabel = document.createElement("label");
+//       radioLabel.textContent = label;
+//       radioLabel.htmlFor = `${label.toLowerCase()}Radio`;
 
-      newFilterContainer.appendChild(radioInput);
-      newFilterContainer.appendChild(radioLabel);
-    });
+//       if (label === "All") {
+//         // Make "All" option checked by default
+//         radioInput.checked = true;
+//       }
 
-    productContainer.parentNode.insertBefore(
-      newFilterContainer,
-      productContainer
-    );
-  } catch (error) {
-    console.error("Error rendering gender filter:", error);
-  }
-}
+//       newFilterContainer.appendChild(radioInput);
+//       newFilterContainer.appendChild(radioLabel);
+//     });
 
-function filterProducts(event) {
-  const selectedGender = event.target.value;
-  const filteredProducts = [];
+//     productContainer.parentNode.insertBefore(
+//       newFilterContainer,
+//       productContainer
+//     );
+//   } catch (error) {
+//     console.error("Error rendering gender filter:", error);
+//   }
+// }
 
-  if (selectedGender === "all") {
-    // If "All" is selected, add all products to the filtered list
-    filteredProducts.push(...products);
-  } else {
-    // If a specific gender is selected, filter products based on the gender
-    filteredProducts.push(...products.filter(product => product.gender.toLowerCase() === selectedGender));
-  }
+// function filterProducts(event) {
+//   const selectedGender = event.target.value;
+//   const filteredProducts = [];
 
-  // Render the filtered products
-  renderFilteredProducts(filteredProducts);
-}
+//   if (selectedGender === "all") {
+//     // If "All" is selected, add all products to the filtered list
+//     filteredProducts.push(...products);
+//   } else {
+//     // If a specific gender is selected, filter products based on the gender
+//     filteredProducts.push(
+//       ...products.filter(
+//         (product) => product.gender.toLowerCase() === selectedGender
+//       )
+//     );
+//   }
 
-function renderFilteredProducts(filteredProducts) {
-  const productContainer = document.getElementById("productContainer");
-  productContainer.innerHTML = "";
+//   // Render the filtered products
+//   renderFilteredProducts(filteredProducts);
+// }
 
-  filteredProducts.forEach((product) => {
-    // Render product as before
-    const { id, title, description, image, sizes, price, gender } = product;
+// function renderFilteredProducts(filteredProducts) {
+//   const productContainer = document.getElementById("productContainer");
+//   productContainer.innerHTML = "";
 
-    const box = document.createElement("div");
-    box.classList.add("box");
+//   filteredProducts.forEach((product) => {
+//     // Render product as before
+//     const { id, title, description, image, sizes, price, gender } = product;
 
-    box.dataset.productId = id;
+//     const box = document.createElement("div");
+//     box.classList.add("box");
 
-    const productLink = document.createElement("a");
-    productLink.href = `/index/productSpecificPage.html?id=${id}`;
+//     box.dataset.productId = id;
 
-    const productImage = document.createElement("img");
-    productImage.src = image.url;
-    productImage.alt = image.alt || "Product Image";
+//     const productLink = document.createElement("a");
+//     productLink.href = `/index/productSpecificPage.html?id=${id}`;
 
-    const productName = document.createElement("h4");
-    productName.textContent = title;
+//     const productImage = document.createElement("img");
+//     productImage.src = image.url;
+//     productImage.alt = image.alt || "Product Image";
 
-    const productDescription = document.createElement("p");
-    productDescription.textContent = description;
+//     const productName = document.createElement("h4");
+//     productName.textContent = title;
 
-    const productPrice = document.createElement("h5");
-    productPrice.textContent = `$${price}`;
+//     const productDescription = document.createElement("p");
+//     productDescription.textContent = description;
 
-    const productGender = document.createElement("p");
-    productGender.textContent = gender;
+//     const productPrice = document.createElement("h5");
+//     productPrice.textContent = `$${price}`;
 
-    const productSizes = document.createElement("p");
-    productSizes.textContent = "Sizes: " + sizes.join(", ");
+//     const productGender = document.createElement("p");
+//     productGender.textContent = gender;
 
-    const cartIcon = document.createElement("div");
-    cartIcon.classList.add("cart");
-    const shoppingBagIcon = document.createElement("i");
-    shoppingBagIcon.classList.add("bx", "bx-shopping-bag");
-    cartIcon.appendChild(shoppingBagIcon);
+//     const productSizes = document.createElement("p");
+//     productSizes.textContent = "Sizes: " + sizes.join(", ");
 
-    productLink.appendChild(productImage);
-    box.appendChild(productLink);
-    box.appendChild(productName);
-    box.appendChild(productDescription);
-    box.appendChild(productPrice);
-    box.appendChild(productGender);
-    box.appendChild(productSizes);
-    box.appendChild(cartIcon);
+//     const cartIcon = document.createElement("div");
+//     cartIcon.classList.add("cart");
+//     const shoppingBagIcon = document.createElement("i");
+//     shoppingBagIcon.classList.add("bx", "bx-shopping-bag");
+//     cartIcon.appendChild(shoppingBagIcon);
 
-    productContainer.appendChild(box);
-  });
-}
+//     productLink.appendChild(productImage);
+//     box.appendChild(productLink);
+//     box.appendChild(productName);
+//     box.appendChild(productDescription);
+//     box.appendChild(productPrice);
+//     box.appendChild(productGender);
+//     box.appendChild(productSizes);
+//     box.appendChild(cartIcon);
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
-});
+//     productContainer.appendChild(box);
+//   });
+// }
 
-export { products, renderProducts, clickedProduct };
+// document.addEventListener("DOMContentLoaded", () => {
+//   renderProducts();
+// });
+
+// // Call updateCartCount function when the page loads
+// document.addEventListener("DOMContentLoaded", updateCartCount);
+// export { products, renderProducts, clickedProduct };

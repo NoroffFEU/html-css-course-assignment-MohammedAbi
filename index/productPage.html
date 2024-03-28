@@ -21,10 +21,10 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
+    <script type="module" src="/script/nav.js"></script>
+    <script type="module" src="/script/main.js"></script>
+    <script type="module" src="/script/fetchProductDetails.js"></script>
+    
   </head>
   <body>
     <div class="container">
@@ -67,22 +67,8 @@
     <div class="container">
       <section class="shop" id="shop">
         <h1>Men's & Women's collections</h1>
-        <div class="collectionItems" id="productContainer">
-          <div id="loader"></div>
-          <div class="box">
-            <a href="/index/productSpecificPage.html"
-              ><img
-                src="/assets/images/RainyDays_Jacket1.jpg"
-                alt="A red and black rain jacket for both men and women on a white background."
-              />
-            </a>
-            <h4>StormGuard Pro</h4>
-            <h5>$142</h5>
-            <div class="cart">
-              <i class="bx bx-shopping-bag" id="bx-shopping-bag"></i>
-            </div>
-          </div>
-        </div>
+        <div id="loader" class="loader"></div>
+        <div class="collectionItems" id="productContainer"></div>
       </section>
     </div>
     <div class="container">
@@ -155,14 +141,5 @@
         </div>
       </section>
     </div>
-    <script src="/script/nav.js"></script>
-    <script src="/script/productPage.js"></script>
-
-    <script type="module" src="/script/products.js"></script>
-    <script type="module" src="/script/app.js"></script>
-    <script type="module" src="/script/user.js"></script>
-
-
-    <!-- <script src="../script/product.js"></script> -->
   </body>
 </html>

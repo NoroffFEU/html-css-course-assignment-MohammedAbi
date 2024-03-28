@@ -74,11 +74,11 @@
   transform: translateY(-5px);
 }
 
-/* Styling for the gender filter */
 #filterContainer {
   margin-bottom: 20px;
-  text-align: center; /* Center the contents */
+  text-align: center;
   background-color: var(--bg-color);
+  opacity: .8;
   padding-bottom: 1rem;
 }
 #filterContainer h4 {
@@ -86,7 +86,7 @@
   color: var(--text-color);
   text-align: center;
   display: block;
-  Padding: 1rem;
+  padding: 1rem;
 }
 
 #filterContainer input[type="radio"] {
@@ -95,17 +95,42 @@
   width: 1rem;
   border-radius: 50%;
   margin-right: 5px;
-  vertical-align: middle; /* Align radios vertically */
+  vertical-align: middle;
 }
 
 #filterContainer label {
   display: inline-block;
   font-size: 1.2rem;
-  vertical-align: middle; /* Align labels vertically */
+  vertical-align: middle;
   margin-right: 5px;
 }
 
+.loader {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /*
     <!---------------------------------- Start End ----------------------------------------------->

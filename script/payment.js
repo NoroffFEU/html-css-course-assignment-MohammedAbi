@@ -1,7 +1,3 @@
-// document.getElementById("submitButton").onclick = function () {
-//   location.href = "/index/successPage.html";
-// };
-
 // Define an array of objects representing the payment fields
 const paymentFields = [
   { id: "cardNumber", placeholder: "Card Number" },
