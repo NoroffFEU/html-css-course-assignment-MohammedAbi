@@ -58,7 +58,7 @@ function generateCartInfo() {
     const submitButton = document.createElement("button");
     submitButton.classList.add("submitButton");
     submitButton.id = "submitButton";
-    submitButton.textContent = "Check email for info";
+    submitButton.textContent = "Continue Shopping";
     submitButton.addEventListener("click", function () {
       window.location.href = `../index.html`;
     });

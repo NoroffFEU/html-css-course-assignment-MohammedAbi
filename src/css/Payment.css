@@ -143,10 +143,16 @@
   font-weight: 700;
   line-height: 34px;
   border: none;
+  margin-top: 2rem;
 }
 .ctaCart .submitButton:hover {
   background-color: #45a049;
 }
+
+#paymentFormContainer {
+  padding-bottom: 3rem;
+}
+
 /* 
 <!---------------------------------- End Payment ----------------------------------------------->
  */
@@ -224,7 +230,9 @@
       display: grid;
       grid-template-rows: 1fr repeat(3, 1fr) 1fr;
       grid-gap: 5px;
+      padding-bottom: 2rem;
     }
+    
 
     .formItem {
       font-size: 10px;
