@@ -1,3 +1,5 @@
+import { updateCartCount } from "./updateCartCount.js";
+
 function showSidebar() {
   const sidebar = document.querySelector(".sideBar");
   sidebar.style.display = "flex";
@@ -22,3 +24,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Call updateCartCount function when the page loads
+document.addEventListener("DOMContentLoaded", updateCartCount);

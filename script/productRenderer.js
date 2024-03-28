@@ -39,11 +39,6 @@ function renderFilteredProducts(filteredProducts) {
     shoppingBagIcon.classList.add("bx", "bx-shopping-bag");
     cartIcon.appendChild(shoppingBagIcon);
 
-    // Add event listener to the product box to log the clicked product
-    box.addEventListener("click", () => {
-        console.log("Clicked Product:", product);
-      });
-
     productLink.appendChild(productImage);
     box.appendChild(productLink);
     box.appendChild(productName);
