@@ -6,7 +6,8 @@ function handleAddToCart(event) {
 
   const selectedSize = document.getElementById("size").value;
   const selectedColor = document.getElementById("color").value;
-  const selectedQuantity = document.getElementById("qnty").value;
+  // const selectedQuantity = document.getElementById("qnty").value;
+  const selectedQuantity = parseInt(document.getElementById("qnty").value);
 
   if (!selectedSize || !selectedColor || !selectedQuantity) {
     alert("Please select size, color, and quantity before adding to cart.");
