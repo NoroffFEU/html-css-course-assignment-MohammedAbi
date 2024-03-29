@@ -1,5 +1,6 @@
 import { handleAddToCart } from "./handleAddToCart.js";
 import { updateCartCount } from "./updateCartCount.js";
+import { showLoader, hideLoader } from "./loader.js";
 
 // Call updateCartCount function when the page loads
 document.addEventListener("DOMContentLoaded", updateCartCount);
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
 // Function to fetch product details from the server using the product ID
 async function fetchProductDetails(productId) {
   try {
+    showLoader();
     const response = await fetch(
       `https://v2.api.noroff.dev/rainy-days/${productId}`
     );
@@ -14,6 +16,7 @@ async function fetchProductDetails(productId) {
     if (response.ok) {
       const product = await response.json();
       displayProductDetails(product);
+      hideLoader();
     } else {
       throw new Error(
         "Failed to fetch product details with status: " + response.status
@@ -21,6 +24,7 @@ async function fetchProductDetails(productId) {
     }
   } catch (error) {
     console.error("Error fetching product details:", error);
+    hideLoader();
   }
 }
 
