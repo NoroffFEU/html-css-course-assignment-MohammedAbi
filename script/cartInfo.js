@@ -50,6 +50,14 @@ function displayProductsInCart(products) {
       console.error("Cart count element not found.");
     }
 
+    // Update the total price element to $0.00 when the cart is empty
+    const totalPriceElement = document.querySelector(".totalPrice p");
+    if (totalPriceElement) {
+      totalPriceElement.textContent = "$0.00";
+    } else {
+      console.error("Total price element not found.");
+    }
+
     return; // Return early if cart is empty
   }
 
@@ -106,7 +114,7 @@ function displayProductsInCart(products) {
   // Update the total price element in the HTML
   const totalPriceElement = document.querySelector(".totalPrice p");
   if (totalPriceElement) {
-    totalPriceElement.textContent = `$ ${totalPrice.toFixed(2)}`;
+    totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
   } else {
     console.error("Total price element not found.");
   }
@@ -120,22 +128,6 @@ function displayProductsInCart(products) {
   }
 
   console.log("Displayed products in cart:", JSON.stringify(products));
-}
-
-// Function to remove a product from the cart
-function removeCartItem(index) {
-  // Retrieve products from local storage
-  let products = JSON.parse(localStorage.getItem("productsInCart")) || [];
-
-  // Remove the product at the specified index
-  products.splice(index, 1);
-
-  // Update local storage
-  localStorage.setItem("productsInCart", JSON.stringify(products));
-
-  // Display updated cart
-  displayProductsInCart(products);
-  console.log("Removed product at index", index);
 }
 
 // Function to update the cart count based on the items in the cart
