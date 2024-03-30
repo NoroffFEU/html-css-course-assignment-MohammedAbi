@@ -1,3 +1,5 @@
+import { showLoader, hideLoader } from "./loader.js";
+
 // Function to remove a product from the cart
 function removeCartItem(index, products) {
   // Get the product at the specified index
@@ -13,7 +15,6 @@ function removeCartItem(index, products) {
 
   // Update local storage
   localStorage.setItem("productsInCart", JSON.stringify(products));
-
   // Return the updated products array
   return products;
 }

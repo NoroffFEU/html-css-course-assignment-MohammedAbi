@@ -5,7 +5,7 @@
   --font-style: normal;
   --active-color: #a23095ba;
 }
-#loader {
+/* #loader {
   display: none;
   width: 50px;
   height: 50px;
@@ -24,4 +24,4 @@
   to {
     -webkit-transform: rotate(360deg);
   }
-}
+} */
