@@ -70,7 +70,7 @@ button:hover {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #4caf50;
   margin-left: 10px;
 }
@@ -129,6 +129,9 @@ a:hover {
 @media (max-width: 1024px) {
   .container {
     max-width: 768px;
+    .nav-user {
+      display: none !important;
+    }
   }
 }
 
