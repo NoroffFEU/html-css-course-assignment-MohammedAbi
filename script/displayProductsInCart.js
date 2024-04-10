@@ -4,8 +4,6 @@ import { showLoader, hideLoader } from "./loader.js";
 
 // Function to display products in the cart
 function displayProductsInCart(products) {
-  // Show loader
-  showLoader();
   // Select the table body element to append cart items
   const tbody = document.querySelector(".tbody");
 
@@ -28,8 +26,14 @@ function displayProductsInCart(products) {
     // Update the total price element to $0.00 when the cart is empty
     updateTotalPrice(0);
 
+    // Hide loader when the cart is empty
+    hideLoader();
+
     return; // Return early if cart is empty
   }
+
+  // Show loader when there are products to display
+  showLoader();
 
   // Loop through each product and create HTML elements to display them
   products.forEach((product, index) => {
@@ -121,4 +125,4 @@ function updateTotalPrice(totalPrice) {
   }
 }
 
-export { displayProductsInCart };
+export { displayProductsInCart }; // Exporting the function properly

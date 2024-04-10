@@ -67,9 +67,7 @@ function displayProductDetails(product) {
               <label for="color">Color</label>
               <select name="color" id="color">
                 <option value="">Color</option>
-                <option value="${product.data.baseColor}">${
-      product.data.baseColor
-    }</option>
+                <option value="${product.data.baseColor}">${product.data.baseColor}</option>
               </select>
               <label for="qnty">Qnty</label>
               <select name="qnty" id="qnty">
