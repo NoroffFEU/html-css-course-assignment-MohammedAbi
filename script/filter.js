@@ -31,7 +31,7 @@ function renderGenderFilter(products) {
       radioInput.id = `${label.toLowerCase()}Radio`;
       radioInput.addEventListener("change", (event) =>
         filterProducts(products, event)
-      ); // Add event listener and pass event
+      );
 
       const radioLabel = document.createElement("label");
       radioLabel.textContent = label;

@@ -11,7 +11,7 @@
   box-shadow: 0px 2px 18px 0 rgb(129, 162, 182 / 20%);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 25px 8%;
   transition: 0.3s;
   
