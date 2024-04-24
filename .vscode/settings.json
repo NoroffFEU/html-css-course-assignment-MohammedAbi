@@ -3,5 +3,6 @@
   "editor.tabCompletion": "on",
   "emmet.triggerExpansionOnTab": false,
   "editor.semanticHighlighting.enabled": true,
-  "githubPullRequests.ignoredPullRequestBranches": ["main"]
+  "githubPullRequests.ignoredPullRequestBranches": ["main"],
+  "liveServer.settings.CustomBrowser": "chrome"
 }
