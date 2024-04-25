@@ -63,7 +63,7 @@ function updateCartWithProduct(product) {
   }
 
   localStorage.setItem("productsInCart", JSON.stringify(productsInCart));
-  window.location.href = "/index/cartInfo.html";
+  window.location.href = "/info/cartInfo.html";
 }
 
 export { handleAddToCart };
