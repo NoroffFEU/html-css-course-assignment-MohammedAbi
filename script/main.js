@@ -30,7 +30,7 @@ async function renderProducts() {
 
     const { data } = await response.json();
     products = data;
-    renderGenderFilter(products); 
+    renderGenderFilter(products);
     renderFilteredProducts(products);
 
     hideLoader();

@@ -85,8 +85,6 @@ function captureFilledValues() {
       }
     });
 
-    console.log("Filled values:", filledValues);
-
     // Retrieve existing data from local storage or initialize as an empty array
     const existingData = JSON.parse(localStorage.getItem("filledValues")) || [];
 
@@ -95,9 +93,6 @@ function captureFilledValues() {
 
     // Store the updated array back in local storage
     localStorage.setItem("filledValues", JSON.stringify(existingData));
-
-    console.log("Filled values stored in local storage:", existingData);
-    // Now you can use the filledValues object as needed
 
     // Redirect the user to the payment page
     location.href = "/info/payment.html";

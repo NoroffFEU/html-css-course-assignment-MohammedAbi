@@ -92,7 +92,6 @@ function validatePaymentForm() {
   return isValid;
 }
 
-
 // Function to capture filled payment values and redirect if form is valid
 function capturePaymentValues() {
   try {
@@ -110,8 +109,6 @@ function capturePaymentValues() {
       }
     });
 
-    console.log("Filled payment values:", filledValues);
-
     // Retrieve existing data from local storage or initialize as an empty array
     const existingData = JSON.parse(localStorage.getItem("filledValues")) || [];
 
@@ -121,11 +118,9 @@ function capturePaymentValues() {
     // Store the updated array back in local storage
     localStorage.setItem("filledValues", JSON.stringify(existingData));
 
-    console.log("Filled values stored in local storage:", existingData);
-    // Now you can use the filledValues object as needed
-
     // Retrieve the products from local storage
-    let productsInCart = JSON.parse(localStorage.getItem("productsInCart")) || [];
+    let productsInCart =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
 
     // Remove items from the cart
     localStorage.removeItem("productsInCart");
@@ -136,7 +131,6 @@ function capturePaymentValues() {
     console.error("Error capturing filled payment values:", error);
   }
 }
-
 
 // Call the function to generate payment inputs when the page loads
 document.addEventListener("DOMContentLoaded", () => {
