@@ -92,6 +92,7 @@ function validatePaymentForm() {
   return isValid;
 }
 
+
 // Function to capture filled payment values and redirect if form is valid
 function capturePaymentValues() {
   try {
@@ -123,12 +124,19 @@ function capturePaymentValues() {
     console.log("Filled values stored in local storage:", existingData);
     // Now you can use the filledValues object as needed
 
+    // Retrieve the products from local storage
+    let productsInCart = JSON.parse(localStorage.getItem("productsInCart")) || [];
+
+    // Remove items from the cart
+    localStorage.removeItem("productsInCart");
+
     // Redirect the user to the payment confirmation page
     location.href = "/info/successPage.html";
   } catch (error) {
     console.error("Error capturing filled payment values:", error);
   }
 }
+
 
 // Call the function to generate payment inputs when the page loads
 document.addEventListener("DOMContentLoaded", () => {
