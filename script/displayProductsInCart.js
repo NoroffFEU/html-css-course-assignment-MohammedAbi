@@ -18,7 +18,6 @@ function displayProductsInCart(products) {
     // Display message when cart is empty
     tbody.innerHTML =
       "<tr><td colspan='7'><h4>Your cart is empty!!</h4></td></tr>";
-    console.log("Cart is empty.");
 
     // Update the cart count element to 0 when the cart is empty
     updateCartCount(0);
@@ -111,8 +110,7 @@ function displayProductsInCart(products) {
   // Hide loader after a slight delay
   setTimeout(() => {
     hideLoader();
-  }, 2000); // Adjust the delay time as needed
-  console.log("Displayed products in cart:", JSON.stringify(products));
+  }, 2000);
 }
 
 // Function to update the total price element in the HTML

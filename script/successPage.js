@@ -1,6 +1,3 @@
-// document.getElementById("submitButton").onclick = function () {
-//   location.href = "../index.html";
-// };
 // Define the support email address
 const supportEmail = "support@example.com";
 // Define the steps and their corresponding content
@@ -60,7 +57,7 @@ function generateCartInfo() {
     submitButton.id = "submitButton";
     submitButton.textContent = "Continue Shopping";
     submitButton.addEventListener("click", function () {
-      window.location.href = `../index.html`;
+      window.location.href = `/info`;
     });
     ctaCart.appendChild(submitButton);
     deliverySection.appendChild(ctaCart);

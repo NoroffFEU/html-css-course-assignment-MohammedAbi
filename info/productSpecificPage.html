@@ -5,65 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Fill out the delivery form for your men's and women's rain jackets on our e-commerce website. Provide all necessary information to ensure a smooth and timely delivery of your order."
+      content="Browse our extensive collection of rain jackets for men and women. Stay dry and stylish with our range of high-quality waterproof outerwear available on our e-commerce website. Find the perfect rain jacket for any weather condition."
     />
-    <title>Delivery form</title>
+    <title>Product details | Rainy Days home page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/src/css/reset.css" />
     <link rel="stylesheet" href="/src/css/variables.css" />
     <link rel="stylesheet" href="/src/css/navigation.css" />
-    <link rel="stylesheet" href="/src/css/delivery.css" />
+    <link rel="stylesheet" href="/src/css/productSpecificPage.css" />
     <link rel="stylesheet" href="/src/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <script type="module" src="/script/common.js"></script>
     <script src="/script/nav.js" defer></script>
-    <script src="/script/delivery.js" defer></script>
+    <script type="module" src="../script/productSpecific.js"></script>
   </head>
-
   <body>
     <div class="container">
       <header>
-        <a href="../index.html" class="logo"
+        <a href="/info" class="logo"
           ><img
             src="/assets/images/logo.png"
             alt="Rainy Days logo for e-commerce website that sells a range of stylish and functional rain jackets for men and women."
         /></a>
         <ul class="navbar">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/index/productPage.html">Men</a></li>
-          <li><a href="/index/productPage.html">Women</a></li>
+          <li><a href="/info">Home</a></li>
+          <li><a href="/info">Men</a></li>
+          <li><a href="/info">Women</a></li>
         </ul>
         <ul class="navbar">
-          <li><a href="/index/aboutPage.html">About</a></li>
-          <li><a href="/index/contactPage.html">Contact</a></li>
+          <li><a href="/info/aboutPage.html">About</a></li>
+          <li><a href="/info/contactPage.html">Contact</a></li>
         </ul>
+
         <ul class="sideBar">
           <li>
             <i class="bx bx-md bx-x" onclick="hideSideBar()"></i>
           </li>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/index/productPage.html">Men</a></li>
-          <li><a href="/index/productPage.html">Women</a></li>
-          <li><a href="/index/aboutPage.html">About</a></li>
-          <li><a href="/index/contactPage.html">Contact</a></li>
-          <li><a href="/index/cartInfo.html">Cart</a></li>
-          <li><a href="/index/terms&conditions.html">Terms & conditions</a></li>
-          <li><a href="/index/privacyPolicy.html">Privacy Policy</a></li>
+          <li><a href="/info">Home</a></li>
+          <li><a href="/info">Men</a></li>
+          <li><a href="/info">Women</a></li>
+          <li><a href="/info/aboutPage.html">About</a></li>
+          <li><a href="/info/contactPage.html">Contact</a></li>
+          <li><a href="/info/cartInfo.html">Cart</a></li>
+          <li><a href="/info/terms&conditions.html">Terms & conditions</a></li>
+          <li><a href="/info/privacyPolicy.html">Privacy Policy</a></li>
           <li>
-            <a href="/index/profile.html"><i class="bx bx-md bx-user"></i></a>
+            <a href="/info/profile.html"><i class="bx bx-md bx-user"></i></a>
           </li>
         </ul>
         <div class="icons">
-          <a href="/index/profile.html"
+          <a href="/info/profile.html"
             ><i class="bx bx-md bx-user bx-user nav-user"></i
           ></a>
-          <a href="/index/cartInfo.html"
+          <a href="/info/cartInfo.html"
             ><i class="bx bx-md bx-shopping-bag"
               ><span class="counter"></span
             ></i>
@@ -73,29 +82,11 @@
       </header>
     </div>
     <div class="container">
-      <section class="cartInfo">
-        <div class="cartStatus">
-          <div class="cartstatusIndicator">Cart</div>
-          <div class="cartstatusIndicator">Delivery</div>
-          <div class="cartstatusIndicator">Payment</div>
-          <div class="cartstatusIndicator">Receipt</div>
-        </div>
-        <h1>Delivery</h1>
-        <div class="deliveryInputs">
-          <div id="deliveryGridContainer" class="gridContainer"></div>
-          <div class="ctaCart">
-            <div>
-              <p>
-                <a href="/index/cartInfo.html">
-                  <i class="bx bx-sx bx-chevron-left"></i>
-                  Back to cart
-                </a>
-              </p>
-            </div>
-            <button class="submitButton" id="submitButton">
-              Proceed to checkout
-            </button>
-          </div>
+      <section class="shop" id="shop">
+        <h1>Men's Collections</h1>
+        <div id="loader" class="loader"></div>
+        <div class="collectionItems">
+          <div id="loader">Loading...</div>
         </div>
       </section>
     </div>
@@ -103,7 +94,7 @@
       <section class="footerContainer">
         <footer class="mainFooter">
           <div class="leftSide">
-            <a href="/index.html">
+            <a href="/info">
               <img
                 class="logoFooter"
                 src="/assets/images/logo.png"
@@ -113,21 +104,21 @@
             <p>- We create beauty</p>
           </div>
           <div class="middleSide">
-            <a href="/index.html">
+            <a href="/info">
               <span>Store</span>
             </a>
-            <a href="/index/productPage.html">
+            <a href="/info">
               <p>New Season</p>
             </a>
-            <a href="/index/productPage.html">
+            <a href="/info">
               <p>Most Sold</p>
             </a>
           </div>
           <div class="middleSide">
-            <a href="/index/aboutPage.html">
+            <a href="/info/aboutPage.html">
               <span>About</span>
             </a>
-            <a href="/index/contactPage.html">
+            <a href="/info//contactPage.html">
               <p>Help</p>
             </a>
             <a href="https://tools.usps.com/go/TrackConfirmAction_input">
@@ -135,16 +126,16 @@
             </a>
           </div>
           <div class="middleSide">
-            <a href="/index/aboutPage.html">
+            <a href="/info/aboutPage.html">
               <span>Info</span>
             </a>
-            <a href="/index/contactPage.html">
+            <a href="/info/contactPage.html">
               <p>Contact</p>
             </a>
-            <a href="/index/terms&conditions.html">
+            <a href="/info/terms&conditions.html">
               <p>Term & Condition</p>
             </a>
-            <a href="/index/privacyPolicy.html">
+            <a href="/info/privacyPolicy.html">
               <p>Privacy Policy</p>
             </a>
           </div>

@@ -12,7 +12,7 @@ function renderFilteredProducts(filteredProducts) {
     box.dataset.productId = id;
 
     const productLink = document.createElement("a");
-    productLink.href = `/index/productSpecificPage.html?id=${id}`;
+    productLink.href = `/info/productSpecificPage.html?id=${id}`;
 
     const productImage = document.createElement("img");
     productImage.src = image.url;

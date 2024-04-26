@@ -10,7 +10,9 @@ const paymentFields = [
 // Function to generate payment input fields
 function generatePaymentInputs() {
   try {
-    const paymentFormContainer = document.getElementById("paymentFormContainer");
+    const paymentFormContainer = document.getElementById(
+      "paymentFormContainer"
+    );
     if (!paymentFormContainer) {
       console.error("Payment form container not found.");
       return;
@@ -72,7 +74,8 @@ function validatePaymentForm() {
           const cardHolder = inputField.value.trim().split(" ");
           if (cardHolder.length !== 2) {
             isValid = false;
-            errorMessage += "Card Holder must include both first name and last name.\n";
+            errorMessage +=
+              "Card Holder must include both first name and last name.\n";
             inputField.classList.add("error");
           }
           break;
@@ -106,8 +109,6 @@ function capturePaymentValues() {
       }
     });
 
-    console.log("Filled payment values:", filledValues);
-
     // Retrieve existing data from local storage or initialize as an empty array
     const existingData = JSON.parse(localStorage.getItem("filledValues")) || [];
 
@@ -117,11 +118,15 @@ function capturePaymentValues() {
     // Store the updated array back in local storage
     localStorage.setItem("filledValues", JSON.stringify(existingData));
 
-    console.log("Filled values stored in local storage:", existingData);
-    // Now you can use the filledValues object as needed
+    // Retrieve the products from local storage
+    let productsInCart =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
+
+    // Remove items from the cart
+    localStorage.removeItem("productsInCart");
 
     // Redirect the user to the payment confirmation page
-    location.href = "/index/successPage.html";
+    location.href = "/info/successPage.html";
   } catch (error) {
     console.error("Error capturing filled payment values:", error);
   }
@@ -143,7 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to calculate and display the total price of the items in the cart
 function displayTotalPriceInPaymentButton() {
   // Retrieve the products from local storage
-  const productsInCart = JSON.parse(localStorage.getItem("productsInCart")) || [];
+  const productsInCart =
+    JSON.parse(localStorage.getItem("productsInCart")) || [];
 
   // Calculate the total price
   let totalPrice = 0;
