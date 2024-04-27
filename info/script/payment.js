@@ -126,7 +126,7 @@ function capturePaymentValues() {
     localStorage.removeItem("productsInCart");
 
     // Redirect the user to the payment confirmation page
-    location.href = "/info/successPage.html";
+    location.href = "./successPage.html";
   } catch (error) {
     console.error("Error capturing filled payment values:", error);
   }
