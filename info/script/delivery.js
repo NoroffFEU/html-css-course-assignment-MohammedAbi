@@ -95,7 +95,7 @@ function captureFilledValues() {
     localStorage.setItem("filledValues", JSON.stringify(existingData));
 
     // Redirect the user to the payment page
-    location.href = "/info/payment.html";
+    location.href = "./payment.html";
   } catch (error) {
     console.error("Error capturing filled values:", error);
   }
