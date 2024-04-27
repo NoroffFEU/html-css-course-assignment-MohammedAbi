@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (submitButton) {
     submitButton.addEventListener("click", function () {
       // Redirect the user to the specified location
-      window.location.href = "/info/delivery.html";
+      window.location.href = "./delivery.html";
     });
   } else {
     console.error("Submit button not found.");
