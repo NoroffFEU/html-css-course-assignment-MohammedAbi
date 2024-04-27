@@ -3,7 +3,6 @@ import { getClickedProductId } from "./getClickedProductId.js";
 // import { getClickedProductId } from "./info/script/getClickedProductId.js";
 import { updateCartCount } from "./updateCartCount.js";
 import { fetchProductDetails } from "./fetchProductDetails.js";
-// import { fetchProductDetails } from "./info/script/fetchProductDetails.js";
 
 // Call updateCartCount function when the page loads
 document.addEventListener("DOMContentLoaded", updateCartCount);
