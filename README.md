@@ -88,4 +88,3 @@ Tutorials:
 - [Create a Shopping Cart With Vanilla JavaScript | ES6 - By Code Explained](https://www.youtube.com/watch?v=UcrypywtAm0&list=PLf9jWAVTVXo_pkSMDn3GFQBqNpS2mSPVg&index=48)
 - [Ten Steps to Mastering the Fetch API - By Steve Griffith - Prof3ssorSt3v3](https://www.youtube.com/watch?v=2sQ9xiEAXNo&list=PLf9jWAVTVXo_pkSMDn3GFQBqNpS2mSPVg&index=47)
 - [ChatGPT](https://chat.openai.com/auth/login) - Used for problem-solving and guidance during development.
-
