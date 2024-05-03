@@ -70,9 +70,9 @@
   align-items: center;
   justify-content: center;
 }
-.shop .collectionItems .box:hover {
+/* .shop .collectionItems .box:hover {
   transform: translateY(-5px);
-}
+} */
 
 #filterContainer {
   margin-bottom: 20px;
