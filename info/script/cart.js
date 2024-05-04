@@ -9,11 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCartCount(totalQuantity);
 
   const submitButton = document.getElementById("submitButton");
-
-  if (submitButton) {
-    updateSubmitButtonState(submitButton, productsInCart);
-  } else {
-    console.error("Submit button not found.");
+  function updateSubmitButtonState(button, cart) {
+    if (cart.length > 0) {
+      button.removeAttribute("disabled");
+      button.addEventListener("click", function () {
+        // Redirect the user to the specified location
+        window.location.href = "./delivery.html";
+      });
+    } else {
+      button.setAttribute("disabled", "disabled");
+      button.removeEventListener("click", function () {
+        window.location.href = "./delivery.html";
+      });
+    }
   }
 
   // Function to periodically check the cart status and update the submit button
