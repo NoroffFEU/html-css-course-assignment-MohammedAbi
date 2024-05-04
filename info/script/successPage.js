@@ -57,7 +57,7 @@ function generateCartInfo() {
     submitButton.id = "submitButton";
     submitButton.textContent = "Continue Shopping";
     submitButton.addEventListener("click", function () {
-      window.location.href = `./index.html`;
+      window.location.href = `./`;
     });
     ctaCart.appendChild(submitButton);
     deliverySection.appendChild(ctaCart);
