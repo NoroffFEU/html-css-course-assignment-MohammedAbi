@@ -41,7 +41,7 @@ function validatePaymentForm() {
     const inputField = document.getElementById(field.id);
     if (inputField && !inputField.value.trim()) {
       isValid = false;
-      errorMessage += `${field.placeholder} is required.\n`;
+      errorMessage += `<span>${field.placeholder} is required.</span>`;
       if (!inputField.classList.contains("error")) {
         inputField.classList.add("error");
       }
@@ -85,18 +85,29 @@ function validatePaymentForm() {
     }
   });
 
+  const customAlert = document.getElementById("customAlert");
+  const customAlertMessage = document.getElementById("customAlertMessage");
   if (!isValid) {
-    alert(errorMessage);
+    // Show the custom alert
+    customAlertMessage.innerHTML = errorMessage;
+    customAlert.style.display = "block";
+  } else {
+    // Hide the custom alert if form is valid
+    customAlert.style.display = "none";
   }
 
-  return isValid;
+  return { isValid, errorMessage }; // Return isValid and errorMessage
 }
 
 // Function to capture filled payment values and redirect if form is valid
 function capturePaymentValues() {
   try {
-    const isValidForm = validatePaymentForm();
-    if (!isValidForm) {
+    const { isValid, errorMessage } = validatePaymentForm(); // Get isValid and errorMessage
+    if (!isValid) {
+      const customAlert = document.getElementById("customAlert");
+      const customAlertMessage = document.getElementById("customAlertMessage");
+      customAlertMessage.innerHTML = errorMessage;
+      customAlert.style.display = "block";
       return; // Don't proceed if form is invalid
     }
 
@@ -132,19 +143,6 @@ function capturePaymentValues() {
   }
 }
 
-// Call the function to generate payment inputs when the page loads
-document.addEventListener("DOMContentLoaded", () => {
-  generatePaymentInputs();
-
-  // Add event listener to the submit button to capture filled values when clicked
-  const paymentSubmitButton = document.getElementById("paymentSubmitButton");
-  if (paymentSubmitButton) {
-    paymentSubmitButton.addEventListener("click", capturePaymentValues);
-  } else {
-    console.error("Payment submit button not found.");
-  }
-});
-
 // Function to calculate and display the total price of the items in the cart
 function displayTotalPriceInPaymentButton() {
   // Retrieve the products from local storage
@@ -167,5 +165,26 @@ function displayTotalPriceInPaymentButton() {
   }
 }
 
-// Call the function to display the total price in the payment button when the page loads
-document.addEventListener("DOMContentLoaded", displayTotalPriceInPaymentButton);
+// Call the function to generate payment inputs when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  generatePaymentInputs();
+  displayTotalPriceInPaymentButton();
+
+  // Add event listener to the OK button in the custom alert to hide it when clicked
+  const customAlertOkButton = document.getElementById("customAlertOkButton");
+  if (customAlertOkButton) {
+    customAlertOkButton.addEventListener("click", () => {
+      document.getElementById("customAlert").style.display = "none";
+    });
+  } else {
+    console.error("Custom alert OK button not found.");
+  }
+
+  // Add event listener to the submit button to capture filled values when clicked
+  const paymentSubmitButton = document.getElementById("paymentSubmitButton");
+  if (paymentSubmitButton) {
+    paymentSubmitButton.addEventListener("click", capturePaymentValues);
+  } else {
+    console.error("Payment submit button not found.");
+  }
+});

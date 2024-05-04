@@ -153,6 +153,52 @@
   padding-bottom: 3rem;
 }
 
+
+#formContainer {
+  position: relative;
+}
+.custom-alert {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-color);
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-width: 20%; 
+  min-height: 20%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.custom-alert-content {
+  text-align: center;
+}
+
+.custom-alert-content span {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Style for the OK button */
+#customAlertOkButton {
+  width: 100%;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Style for the OK button on hover */
+#customAlertOkButton:hover {
+  background-color: #45a049;
+}
 /* 
 <!---------------------------------- End Payment ----------------------------------------------->
  */

@@ -45,6 +45,28 @@ function generateDeliveryInputs() {
   }
 }
 
+// // Function to validate if all fields are filled
+// function validateForm() {
+//   let isValid = true;
+//   let errorMessage = "";
+
+//   deliveryFields.forEach((field) => {
+//     const inputField = document.getElementById(field.id);
+//     if (inputField && !inputField.value.trim()) {
+//       isValid = false;
+//       errorMessage += `${field.label} is required.\n`;
+//       if (!inputField.classList.contains("error")) {
+//         inputField.classList.add("error");
+//       }
+//     }
+//   });
+
+//   if (!isValid) {
+//     alert(errorMessage);
+//   }
+
+//   return isValid;
+// }
 // Function to validate if all fields are filled
 function validateForm() {
   let isValid = true;
@@ -54,15 +76,22 @@ function validateForm() {
     const inputField = document.getElementById(field.id);
     if (inputField && !inputField.value.trim()) {
       isValid = false;
-      errorMessage += `${field.label} is required.\n`;
+      errorMessage += `<span>${field.label} is required.</span>`;
       if (!inputField.classList.contains("error")) {
         inputField.classList.add("error");
       }
     }
   });
 
+  const customAlert = document.getElementById("customAlert");
+  const customAlertMessage = document.getElementById("customAlertMessage");
   if (!isValid) {
-    alert(errorMessage);
+    // Show the custom alert
+    customAlertMessage.innerHTML = errorMessage;
+    customAlert.style.display = "block";
+  } else {
+    // Hide the custom alert if form is valid
+    customAlert.style.display = "none";
   }
 
   return isValid;
@@ -111,5 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", captureFilledValues);
   } else {
     console.error("Submit button not found.");
+  }
+  // Add event listener to the OK button in the custom alert to hide it when clicked
+  const customAlertOkButton = document.getElementById("customAlertOkButton");
+  if (customAlertOkButton) {
+    customAlertOkButton.addEventListener("click", () => {
+      document.getElementById("customAlert").style.display = "none";
+    });
   }
 });
