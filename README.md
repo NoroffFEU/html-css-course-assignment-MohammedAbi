@@ -57,8 +57,7 @@ This project involves using JavaScript to create an interactive online store tha
 ## Delivery
 
 - GitHub Repository: Submit JavaScript code in the default (main/master) branch.
-- Written Reflection: Provide a reflection on the assignment process.
-=======
+- # Written Reflection: Provide a reflection on the assignment process.
 - GitHub Repository: Submit JavaScript code in the default (main/master) branch.
 - Written Reflection: Provide a reflection on the assignment process.
 
@@ -71,7 +70,8 @@ This project involves using JavaScript to create an interactive online store tha
 ## Getting Started
 
 # Rainy Days
-![image](./assets/images/website.png)
+
+![image](./info/assets/images/website.png)
 
 Links:
 
