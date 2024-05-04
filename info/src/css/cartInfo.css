@@ -195,7 +195,8 @@
   font-size: 16px;
   margin-right: 10px;
 }
-.ctaCart .submitButton {
+.ctaCart .submitButton,
+#submitButton {
   margin-right: 20px;
   border-radius: 6px;
   background-color: var(--bg-color);
@@ -209,10 +210,14 @@
   line-height: 34px;
   border: none;
 }
-.submitButton:hover {
+.submitButton:hover,
+#submitButton:hover {
   background-color: #45a049;
 }
 
+#submitButton[disabled] {
+  background-color: grey;
+}
 .deleteItem {
   display: flex;
   justify-content: center;

@@ -2,35 +2,39 @@ import { displayProductsInCart } from "./displayProductsInCart.js";
 import { updateCartCount } from "./removeCartItem.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Retrieve the products from local storage
-  const productsInCart =
-    JSON.parse(localStorage.getItem("productsInCart")) || [];
+  let productsInCart = JSON.parse(localStorage.getItem("productsInCart")) || [];
 
-  // Display the products in the cart
   displayProductsInCart(productsInCart);
-
-  // Calculate total quantity
   const totalQuantity = getTotalQuantity(productsInCart);
-
-  // Update the cart count with the total quantity
   updateCartCount(totalQuantity);
 
-  // Add event listener to the submit button
   const submitButton = document.getElementById("submitButton");
+
   if (submitButton) {
-    submitButton.addEventListener("click", function () {
-      // Redirect the user to the specified location
-      window.location.href = "./delivery.html";
-    });
+    updateSubmitButtonState(submitButton, productsInCart);
   } else {
     console.error("Submit button not found.");
   }
+
+  // Function to periodically check the cart status and update the submit button
+  setInterval(function () {
+    const updatedCart =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
+    updateSubmitButtonState(submitButton, updatedCart);
+  }, 1000); // Adjust the interval as needed
 });
 
-// Function to calculate the total quantity of items in the cart
 function getTotalQuantity(products) {
   return products.reduce(
     (total, product) => total + parseInt(product.quantity),
     0
   );
+}
+
+function updateSubmitButtonState(button, cart) {
+  if (cart.length > 0) {
+    button.removeAttribute("disabled");
+  } else {
+    button.setAttribute("disabled", "disabled");
+  }
 }

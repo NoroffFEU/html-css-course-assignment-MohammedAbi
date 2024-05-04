@@ -10,7 +10,26 @@ function handleAddToCart(event) {
   const selectedQuantity = parseInt(document.getElementById("qnty").value);
 
   if (!selectedSize || !selectedColor || !selectedQuantity) {
-    alert("Please select size, color, and quantity before adding to cart.");
+    // Function to display the custom alert with a message
+    function showCustomAlert(message) {
+      document.getElementById("customAlertMessage").textContent = message;
+      document.getElementById("customAlert").style.display = "block";
+    }
+
+    // Function to hide the custom alert
+    function hideCustomAlert() {
+      document.getElementById("customAlert").style.display = "none";
+    }
+    // Show the custom alert
+    showCustomAlert("Please select size, color, and quantity before adding to cart.");
+
+    // Add event listener to the OK button in the custom alert
+    document
+      .getElementById("customAlertOkButton")
+      .addEventListener("click", function () {
+        // Hide the custom alert when OK button is clicked
+        hideCustomAlert();
+      });
     return;
   }
 

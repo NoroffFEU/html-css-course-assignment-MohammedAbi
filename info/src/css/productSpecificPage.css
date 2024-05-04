@@ -180,6 +180,41 @@ select:placeholder-shown + label {
   display: none;
 }
 
+#shop {
+  position: relative;
+}
+/* Custom alert message style */
+.alert {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  background-color: var(--bg-color);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style for the OK button */
+.ok-button {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Style for the OK button on hover */
+.ok-button:hover {
+  background-color: #45a049;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
