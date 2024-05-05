@@ -45,28 +45,6 @@ function generateDeliveryInputs() {
   }
 }
 
-// // Function to validate if all fields are filled
-// function validateForm() {
-//   let isValid = true;
-//   let errorMessage = "";
-
-//   deliveryFields.forEach((field) => {
-//     const inputField = document.getElementById(field.id);
-//     if (inputField && !inputField.value.trim()) {
-//       isValid = false;
-//       errorMessage += `${field.label} is required.\n`;
-//       if (!inputField.classList.contains("error")) {
-//         inputField.classList.add("error");
-//       }
-//     }
-//   });
-
-//   if (!isValid) {
-//     alert(errorMessage);
-//   }
-
-//   return isValid;
-// }
 // Function to validate if all fields are filled
 function validateForm() {
   let isValid = true;
